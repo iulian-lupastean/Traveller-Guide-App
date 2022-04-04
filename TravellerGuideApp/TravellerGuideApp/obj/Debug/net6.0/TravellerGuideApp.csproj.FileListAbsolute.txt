@@ -1,0 +1,15 @@
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\TravellerGuideApp.exe
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\TravellerGuideApp.deps.json
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\TravellerGuideApp.runtimeconfig.json
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\TravellerGuideApp.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\TravellerGuideApp.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.csproj.CoreCompileInputs.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\refint\TravellerGuideApp.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravellerGuideApp.genruntimeconfig.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\ref\TravellerGuideApp.dll
