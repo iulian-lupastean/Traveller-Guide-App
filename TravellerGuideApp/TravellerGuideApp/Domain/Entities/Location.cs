@@ -18,7 +18,32 @@ namespace Domain
 
         public override string ToString()
         {
-            return $"{ID} {Name} {City_ID} {Address} {Price} {Location_Type} {Latitude} {Longitude}";
+            return $"{ID} {Name} {City_ID} {Address} {Location_Type} {Price}  {Latitude} {Longitude}";
+        }
+
+
+        public override bool Equals(object obj)
+        {
+            Location location = obj as Location;
+            if (location == null)
+            {
+                return false;
+            }
+            else
+            {
+                return ID == location.ID &&
+                    Name == location.Name &&
+                    City_ID == location.City_ID &&
+                    Address == location.Address &&
+                    Location_Type == location.Location_Type &&
+                    Price == location.Price &&
+                    Latitude == location.Latitude &&
+                    Longitude == location.Longitude;
+
+            }
+
+
+
         }
     }
 }
