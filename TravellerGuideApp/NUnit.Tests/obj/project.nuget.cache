@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uRgT+8FAg4ehAw/KNFcE6sURZzkBFepTTzkPCSKrUqt6F/IaWQ/Op0RR1Z7VvXymWBB9gbqFZXQ9q5Eudq4d4w==",
+  "dgSpecHash": "bUFYkg2f/8EENhQYb0breFRffKBlNfDOBYqN7FoDsmSaA7ovbHt0L3Aagf5LFwQvqtUhgasEIhEZR0+37lrkOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\NUnit.Tests\\NUnit.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilupa\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",

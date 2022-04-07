@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TravellerGuideApp",
+    "\\TravellerGuideApp\\TravellerGuideApp",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Cities",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Cities\\Commands",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Cities\\Commands\\CreateCity",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Users",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Users\\Commands",
+    "\\TravellerGuideApp\\TravellerGuideApp\\Application\\Users\\Commands\\AddNewUser"
+  ],
+  "SelectedNode": "\\TravellerGuideApp\\TravellerGuideApp.sln",
+  "PreviewInSolutionExplorer": false
+}
