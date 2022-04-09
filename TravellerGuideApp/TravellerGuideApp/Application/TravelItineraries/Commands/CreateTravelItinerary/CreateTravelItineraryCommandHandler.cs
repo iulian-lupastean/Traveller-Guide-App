@@ -1,6 +1,7 @@
-﻿using Domain.Entities;
-using MediatR;
-namespace Application.TravelItineraries.Commands.CreateTravelItinerary
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
+
+namespace TravelerGuideApp.Application.TravelItineraries.Commands.CreateTravelItinerary
 {
     public class CreateTravelItineraryCommandHandler : IRequestHandler<CreateTravelItineraryCommand, int>
     {
@@ -16,7 +17,7 @@ namespace Application.TravelItineraries.Commands.CreateTravelItinerary
             var travelItinerary = new TravelItinerary(command.Name, command.Status, command.Travel_Date);
             _repository.CreateTravelItinerary(travelItinerary);
 
-            return Task.FromResult(travelItinerary.ID);
+            return Task.FromResult(travelItinerary.Id);
         }
     }
 }

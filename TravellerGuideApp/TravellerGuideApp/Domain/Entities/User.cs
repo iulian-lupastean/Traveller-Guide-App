@@ -1,23 +1,19 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Domain.Entities;
+﻿namespace TravelerGuideApp.Domain.Entities;
 
 public class User
 {
-    public User(string FirstName, string LastName, string Email, string Password, string User_Type)
+    public User(string firstName, string lastName, string email, string password, string userType)
     {
-        FirstName = FirstName ?? throw new ArgumentNullException(nameof(FirstName));
-        LastName = LastName ?? throw new ArgumentNullException(nameof(LastName));
-        Email = Email ?? throw new ArgumentNullException(nameof(Email));
-        Password = Password ?? throw new ArgumentNullException(nameof(Password));
-        User_Type = User_Type ?? throw new ArgumentNullException(nameof(User_Type));
+        firstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+        lastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+        email = email ?? throw new ArgumentNullException(nameof(email));
+        password = password ?? throw new ArgumentNullException(nameof(password));
+        userType = userType ?? throw new ArgumentNullException(nameof(userType));
     }
     public User()
     {
-
     }
-    public int ID { get; set; }
+    public int Id { get; set; }
 
     public string FirstName { get; set; }
 

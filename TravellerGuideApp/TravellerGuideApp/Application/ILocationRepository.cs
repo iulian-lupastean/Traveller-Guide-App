@@ -1,13 +1,13 @@
-﻿using Domain.Entities;
+﻿using TravelerGuideApp.Domain.Entities;
 
-namespace Application
+namespace TravelerGuideApp.Application
 {
     public interface ILocationRepository
     {
         void CreateLocation(Location location);
-        void UpdateLocation(int Location_ID, Location location);
-        void DeleteLocation(int Location_ID, Location location);
-        Location GetLocation(int Location_ID);
-        IEnumerable<Location> GetAllLocations();
+        void UpdateLocation(Location location);
+        void DeleteLocation(int locationId);
+        Location GetLocationById(int locationId);
+        IEnumerable<Location> GetLocationsForCity(int cityId);
     }
 }

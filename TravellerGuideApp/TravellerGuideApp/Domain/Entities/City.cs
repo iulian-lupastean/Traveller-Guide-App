@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Domain.Entities;
+namespace TravelerGuideApp.Domain.Entities;
 public class City
 {
     public City(string name, string country)
@@ -8,11 +8,7 @@ public class City
         Name = name ?? throw new ArgumentNullException(nameof(name));
         Country = country ?? throw new ArgumentNullException(nameof(country));
     }
-    public City()
-    {
-
-    }
-    public int ID { get; set; }
+    public int Id { get; set; }
     [MaxLength(50)]
     [Required]
     public string Name { get; set; }

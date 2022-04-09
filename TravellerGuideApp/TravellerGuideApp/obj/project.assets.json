@@ -2127,9 +2127,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravellerGuideApp.csproj",
-      "projectName": "TravellerGuideApp",
-      "projectPath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravellerGuideApp.csproj",
+      "projectUniqueName": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravelerGuideApp.csproj",
+      "projectName": "TravelerGuideApp",
+      "projectPath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravelerGuideApp.csproj",
       "packagesPath": "C:\\Users\\ilupa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\obj\\",
       "projectStyle": "PackageReference",

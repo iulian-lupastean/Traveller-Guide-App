@@ -1,9 +1,10 @@
-﻿using Domain.Entities;
-using MediatR;
-namespace Application.Cities.Queries.GetCityByID
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
+
+namespace TravelerGuideApp.Application.Cities.Queries.GetCityById
 {
-    public class GetCityByIDQuery : IRequest<City>
+    public class GetCityByIdQuery : IRequest<City>
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
     }
 }

@@ -1,13 +1,13 @@
-﻿using Domain.Entities;
+﻿using TravelerGuideApp.Domain.Entities;
 
-namespace Application
+namespace TravelerGuideApp.Application
 {
     public interface ICityRepository
     {
         void CreateCity(City city);
         void UpdateCity(City city);
-        void DeleteCity(int City_ID);
-        City GetCityByID(int City_ID);
+        void DeleteCity(int cityId);
+        City GetCityById(int cityId);
         IEnumerable<City> GetCities();
     }
 }

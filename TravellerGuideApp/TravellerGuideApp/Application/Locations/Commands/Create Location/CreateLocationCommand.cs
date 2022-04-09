@@ -1,12 +1,11 @@
 ﻿
 using MediatR;
 
-namespace Application.Locations.Commands.Create_Location
+namespace TravelerGuideApp.Application.Locations.Commands.Create_Location
 {
     public class CreateLocationCommand : IRequest<int>
     {
         public string Name { get; set; }
-        public int CityID { get; set; }
         public string Address { get; set; }
         public string Location_Type { get; set; }
         public double Price { get; set; }

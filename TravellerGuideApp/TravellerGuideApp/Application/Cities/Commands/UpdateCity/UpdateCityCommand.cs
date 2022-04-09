@@ -1,5 +1,6 @@
 ﻿using MediatR;
-namespace Application.Cities.Commands.UpdateCity
+
+namespace TravelerGuideApp.Application.Cities.Commands.UpdateCity
 {
     public class UpdateCityCommand : IRequest<int>
     {

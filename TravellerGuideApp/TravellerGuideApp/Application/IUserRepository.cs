@@ -1,13 +1,13 @@
-﻿using Domain.Entities;
+﻿using TravelerGuideApp.Domain.Entities;
 
-namespace Application
+namespace TravelerGuideApp.Application
 {
     public interface IUserRepository
     {
         void CreateUser(User user);
-        void UpdateUser(int User_ID, User user);
-        void DeleteUser(int User_ID);
-        User GetUser(int User_ID);
+        void UpdateUser(User user);
+        void DeleteUser(int userId);
+        User GetUser(int userId);
         IEnumerable<User> GetAllUsers();
     }
 }

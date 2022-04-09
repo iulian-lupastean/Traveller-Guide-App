@@ -1,6 +1,7 @@
-﻿using Domain.Entities;
-using MediatR;
-namespace Application.Locations.Commands.Create_Location
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
+
+namespace TravelerGuideApp.Application.Locations.Commands.Create_Location
 {
     public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand, int>
     {
@@ -12,10 +13,10 @@ namespace Application.Locations.Commands.Create_Location
         }
         public Task<int> Handle(CreateLocationCommand command, CancellationToken cancellationToken)
         {
-            var location = new Location(command.Name, command.CityID, command.Address, command.Location_Type, command.Price, command.Latitude, command.Longitude);
+            var location = new Location(command.Name, command.Address, command.Location_Type, command.Price, command.Latitude, command.Longitude);
             _repository.CreateLocation(location);
 
-            return Task.FromResult(location.ID);
+            return Task.FromResult(location.Id);
         }
     }
 }

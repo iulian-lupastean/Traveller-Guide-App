@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.TravelItineraries.Commands
+namespace TravelerGuideApp.Application.TravelItineraries.Commands.CreateTravelItinerary
 {
     public class CreateTravelItineraryCommand : IRequest<int>
     {

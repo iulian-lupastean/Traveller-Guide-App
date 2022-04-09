@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.ValueObjects
+﻿
+namespace TravelerGuideApp.Domain.Value_Objects
 {
     public class CountryList
     {
         public static Dictionary<string, string> GetCultureInfo()
         {
-            Dictionary<string, string> CountryList = new Dictionary<string, string>();
-            CountryList.Add("France", "fr-FR");
-            CountryList.Add("United Kingdom", "en-GB");
-            CountryList.Add("Spain", "es-ES");
-            return CountryList;
+            Dictionary<string, string> countryList = new Dictionary<string, string>();
+            countryList.Add("France", "fr-FR");
+            countryList.Add("United Kingdom", "en-GB");
+            countryList.Add("Spain", "es-ES");
+            return countryList;
         }
     }
 

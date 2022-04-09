@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KIiuaj53pIMmv7bj08dWtt3p7rbk+2K6HicR0xDqyBGV4OVNxXIUEwnpH04k+Mgkw2UwiuO8aXGhpTkcyDJv4Q==",
+  "dgSpecHash": "X094psC0+u2LxMM0T1KOOmxdj4Zpjp6PbN5SID5LAHl5YZR915JIZKUTrDAqvIVQm6A3mAzAIKG56+G1JVMaEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravellerGuideApp.csproj",
+  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravelerGuideApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilupa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",

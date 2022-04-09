@@ -1,12 +1,13 @@
-﻿using Domain.Entities;
-namespace Application
+﻿using TravelerGuideApp.Domain.Entities;
+
+namespace TravelerGuideApp.Application
 {
     public interface ITravelItineraryRepository
     {
-        void CreateTravelItinerary(TravelItinerary travelItineary);
-        void UpdateTravelItinerary(int travelItinerary_ID, TravelItinerary travelItineary);
-        void DeleteTravelItinerary(int travelItinerary_ID);
-        TravelItinerary GetTravelItinerary(int travelItinerary_ID);
-        IEnumerable<TravelItinerary> GetAllTravelItineraries();
+        void CreateTravelItinerary(TravelItinerary travelItinerary);
+        void UpdateTravelItinerary(TravelItinerary travelItinerary);
+        void DeleteTravelItinerary(int travelItineraryId);
+        TravelItinerary GetTravelItinerary(int travelItineraryId);
+        IEnumerable<TravelItinerary> GetAllTravelItineraries(int userId);
     }
 }

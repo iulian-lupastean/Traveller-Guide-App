@@ -1,13 +1,12 @@
-﻿namespace Domain.Entities
+﻿namespace TravelerGuideApp.Domain.Entities
 {
     public class ItineraryLocation
     {
 
-        public int ID { get; set; }
-        public int ItineraryID { get; set; }
-        public int LocationID { get; set; }
-
-        public TravelItinerary TravelItinerary { get; set; } = null;
-        public Location Location { get; set; } = null;
+        public int Id { get; set; }
+        public int LocationId { get; set; }
+        public int TravelItineraryId { get; set; }
+        public TravelItinerary? TravelItinerary { get; set; } = null;
+        public Location? Location { get; set; } = null;
     }
 }

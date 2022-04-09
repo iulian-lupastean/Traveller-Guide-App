@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.Cities.Queries.GetCities
+namespace TravelerGuideApp.Application.Cities.Queries.GetCities
 {
     public class GetCitiesListQueryHandler : IRequestHandler<GetCitiesListQuery, IEnumerable<CitiesListVm>>
     {
@@ -15,7 +15,7 @@ namespace Application.Cities.Queries.GetCities
         {
             var result = _repository.GetCities().Select(city => new CitiesListVm
             {
-                Id = city.ID,
+                Id = city.Id,
                 Name = city.Name,
                 Country = city.Country
             });

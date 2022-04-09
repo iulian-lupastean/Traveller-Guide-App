@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
-using MediatR;
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
 
-namespace Application.Cities.Commands.UpdateCity
+namespace TravelerGuideApp.Application.Cities.Commands.UpdateCity
 {
     public class UpdateCityCommandHandler : IRequestHandler<UpdateCityCommand, int>
     {
@@ -16,7 +16,7 @@ namespace Application.Cities.Commands.UpdateCity
         {
             var city = new City(command.Name, command.Country);
             _repository.UpdateCity(city);
-            return Task.FromResult(city.ID);
+            return Task.FromResult(city.Id);
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using Domain.Entities;
-using MediatR;
+﻿using MediatR;
 
-namespace Application.Cities.Commands.DeleteCityByID
+namespace TravelerGuideApp.Application.Cities.Commands.DeleteCity
 {
     public class DeleteCityCommandHandler : IRequestHandler<DeleteCityCommand, int>
     {
@@ -14,9 +13,9 @@ namespace Application.Cities.Commands.DeleteCityByID
 
         public Task<int> Handle(DeleteCityCommand query, CancellationToken cancellationToken)
         {
-            _repository.DeleteCity(query.ID);
+            _repository.DeleteCity(query.Id);
 
-            return Task.FromResult(query.ID);
+            return Task.FromResult(query.Id);
         }
 
     }

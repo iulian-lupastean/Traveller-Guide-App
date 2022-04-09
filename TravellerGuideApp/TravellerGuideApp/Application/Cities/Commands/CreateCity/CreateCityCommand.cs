@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.Cities.Commands.CreateCity
+namespace TravelerGuideApp.Application.Cities.Commands.CreateCity
 {
     public class CreateCityCommand : IRequest<int>
     {

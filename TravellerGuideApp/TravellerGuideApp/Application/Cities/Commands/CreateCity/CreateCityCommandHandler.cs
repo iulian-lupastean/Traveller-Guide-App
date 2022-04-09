@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
-using MediatR;
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
 
-namespace Application.Cities.Commands.CreateCity
+namespace TravelerGuideApp.Application.Cities.Commands.CreateCity
 {
     public class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, int>
     {
@@ -17,7 +17,7 @@ namespace Application.Cities.Commands.CreateCity
             var city = new City(command.Name, command.Country);
             _repository.CreateCity(city);
 
-            return Task.FromResult(city.ID);
+            return Task.FromResult(city.Id);
         }
     }
 }

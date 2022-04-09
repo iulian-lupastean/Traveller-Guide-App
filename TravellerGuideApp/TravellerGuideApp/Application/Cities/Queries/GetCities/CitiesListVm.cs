@@ -1,4 +1,4 @@
-﻿namespace Application.Cities.Queries.GetCities
+﻿namespace TravelerGuideApp.Application.Cities.Queries.GetCities
 {
     public class CitiesListVm
     {

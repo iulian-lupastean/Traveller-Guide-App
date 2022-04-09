@@ -1,20 +1,20 @@
-﻿using Domain.Entities;
-using MediatR;
+﻿using MediatR;
+using TravelerGuideApp.Domain.Entities;
 
-namespace Application.Cities.Queries.GetCityByID
+namespace TravelerGuideApp.Application.Cities.Queries.GetCityById
 {
-    public class GetCityByIDQueryHandler : IRequestHandler<GetCityByIDQuery, City>
+    public class GetCityByIdQueryHandler : IRequestHandler<GetCityByIdQuery, City>
     {
         private readonly ICityRepository _repository;
 
-        public GetCityByIDQueryHandler(ICityRepository repository)
+        public GetCityByIdQueryHandler(ICityRepository repository)
         {
             _repository = repository;
         }
 
-        public Task<City> Handle(GetCityByIDQuery query, CancellationToken cancellationToken)
+        public Task<City> Handle(GetCityByIdQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetCityByID(query.ID);
+            var result = _repository.GetCityById(query.Id);
 
             return Task.FromResult(result);
         }

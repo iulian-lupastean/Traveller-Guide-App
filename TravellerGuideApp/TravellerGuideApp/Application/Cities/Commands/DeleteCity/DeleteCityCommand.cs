@@ -1,9 +1,9 @@
 ﻿using MediatR;
 
-namespace Application.Cities.Commands.DeleteCityByID
+namespace TravelerGuideApp.Application.Cities.Commands.DeleteCity
 {
     public class DeleteCityCommand : IRequest<int>
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
     }
 }
