@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TravelerGuideApp.Infrastructure.Database.DatabaseContext;
 
@@ -11,9 +12,10 @@ using TravelerGuideApp.Infrastructure.Database.DatabaseContext;
 namespace TravelerGuideApp.Migrations
 {
     [DbContext(typeof(TravelerGuideAppDBContext))]
-    partial class TravelerGuideDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220410090704_ModifyDatabase")]
+    partial class ModifyDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
