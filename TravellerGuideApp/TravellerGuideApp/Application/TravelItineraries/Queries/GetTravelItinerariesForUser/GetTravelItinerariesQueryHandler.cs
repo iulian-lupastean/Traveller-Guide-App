@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.TravelItineraries.Queries.GetTravelItiner
 
         public Task<IEnumerable<TravelItineraryVm>> Handle(GetTravelItinerariesQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetAllTravelItineraries(query.UserId).Select(travelItinerary => new TravelItineraryVm
+            var result = _repository.GetAll(query.UserId).Select(travelItinerary => new TravelItineraryVm
             {
                 Id = travelItinerary.Id,
                 Name = travelItinerary.Name,

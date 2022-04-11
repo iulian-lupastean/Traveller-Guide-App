@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Users.Queries.GetUserByID
         }
         public Task<User> Handle(GetUserByIdQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetUser(query.Id);
+            var result = _repository.GetById(query.Id);
 
             return Task.FromResult(result);
         }

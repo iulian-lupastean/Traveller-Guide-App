@@ -4,10 +4,10 @@ namespace TravelerGuideApp.Application
 {
     public interface ILocationRepository
     {
-        void CreateLocation(Location location);
-        void UpdateLocation(Location location);
-        void DeleteLocation(int locationId);
-        Location GetLocationById(int locationId);
+        void Create(Location location);
+        void Update(Location location);
+        void Delete(int locationId);
+        Location GetById(int locationId);
         IEnumerable<Location> GetLocationsForCity(int cityId);
     }
 }

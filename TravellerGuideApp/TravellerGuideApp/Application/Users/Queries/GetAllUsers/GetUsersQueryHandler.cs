@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Users.Queries.GetAllUsers
 
         public Task<IEnumerable<UsersListVm>> Handle(GetUsersQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetAllUsers().Select(user => new UsersListVm
+            var result = _repository.GetAll().Select(user => new UsersListVm
             {
                 Id = user.Id,
                 FirstName = user.FirstName,

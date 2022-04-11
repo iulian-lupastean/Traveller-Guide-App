@@ -15,7 +15,7 @@ namespace TravelerGuideApp.Application.Locations.Commands.UpdateLocation
         public Task<int> Handle(UpdateLocationCommand command, CancellationToken cancellationToken)
         {
             var location = new Location(command.Name, command.Address, command.LocationType, command.Price, command.Latitude, command.Longitude);
-            _repository.UpdateLocation(location);
+            _repository.Update(location);
             return Task.FromResult(location.Id);
         }
     }

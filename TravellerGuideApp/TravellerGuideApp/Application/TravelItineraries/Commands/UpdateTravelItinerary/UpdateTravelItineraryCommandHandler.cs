@@ -15,7 +15,7 @@ namespace TravelerGuideApp.Application.TravelItineraries.Commands.UpdateTravelIt
         public Task<int> Handle(UpdateTravelItineraryCommand command, CancellationToken cancellationToken)
         {
             var travelItinerary = new TravelItinerary(command.Name, command.Status, command.TravelDate);
-            _repository.UpdateTravelItinerary(travelItinerary);
+            _repository.Update(travelItinerary);
             return Task.FromResult(travelItinerary.Id);
         }
     }

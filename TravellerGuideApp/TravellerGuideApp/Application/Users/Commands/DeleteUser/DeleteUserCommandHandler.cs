@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Users.Commands.DeleteUser
 
         public Task<int> Handle(DeleteUserCommand query, CancellationToken cancellationToken)
         {
-            _repository.DeleteUser(query.Id);
+            _repository.Delete(query.Id);
             return Task.FromResult(query.Id);
         }
     }

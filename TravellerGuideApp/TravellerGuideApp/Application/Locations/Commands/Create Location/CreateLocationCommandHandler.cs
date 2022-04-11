@@ -14,7 +14,7 @@ namespace TravelerGuideApp.Application.Locations.Commands.Create_Location
         public Task<int> Handle(CreateLocationCommand command, CancellationToken cancellationToken)
         {
             var location = new Location(command.Name, command.Address, command.Location_Type, command.Price, command.Latitude, command.Longitude);
-            _repository.CreateLocation(location);
+            _repository.Create(location);
 
             return Task.FromResult(location.Id);
         }

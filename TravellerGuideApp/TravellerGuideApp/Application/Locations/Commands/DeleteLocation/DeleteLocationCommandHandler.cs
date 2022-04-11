@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Locations.Commands.DeleteLocation
 
         public Task<int> Handle(DeleteLocationCommand query, CancellationToken cancellationToken)
         {
-            _repository.DeleteLocation(query.Id);
+            _repository.Delete(query.Id);
             return Task.FromResult(query.Id);
         }
     }

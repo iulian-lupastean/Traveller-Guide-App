@@ -14,28 +14,28 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             this.context = context;
         }
 
-        public void CreateCity(City city)
+        public void Create(City city)
         {
             context.Cities.Add(city);
         }
 
-        public void UpdateCity(City city)
+        public void Update(City city)
         {
             context.Entry(city).State = EntityState.Modified;
         }
 
-        public void DeleteCity(int CityId)
+        public void Delete(int CityId)
         {
             City city = context.Cities.Find(CityId);
             context.Cities.Remove(city);
         }
 
-        public City GetCityById(int CityId)
+        public City GetById(int CityId)
         {
             return context.Cities.Find(CityId);
         }
 
-        public IEnumerable<City> GetCities()
+        public IEnumerable<City> GetAll()
         {
             return context.Cities.ToList();
         }

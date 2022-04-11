@@ -14,23 +14,23 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             this.context = context;
         }
 
-        public void CreateLocation(Location location)
+        public void Create(Location location)
         {
             context.Locations.Add(location);
         }
 
-        public void UpdateLocation(Location location)
+        public void Update(Location location)
         {
             context.Entry(location).State = EntityState.Modified;
         }
 
-        public void DeleteLocation(int locationId)
+        public void Delete(int locationId)
         {
             Location location = context.Locations.Find(locationId);
             context.Locations.Remove(location);
         }
 
-        public Location GetLocationById(int locationId)
+        public Location GetById(int locationId)
         {
             return context.Locations.Find(locationId);
         }

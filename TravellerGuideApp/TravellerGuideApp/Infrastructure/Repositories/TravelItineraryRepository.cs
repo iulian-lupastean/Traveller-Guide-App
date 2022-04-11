@@ -14,28 +14,28 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             this.context = context;
         }
 
-        public void CreateTravelItinerary(TravelItinerary travelItinerary)
+        public void Create(TravelItinerary travelItinerary)
         {
             context.TravelItineraries.Add(travelItinerary);
         }
 
-        public void UpdateTravelItinerary(TravelItinerary travelItinerary)
+        public void Update(TravelItinerary travelItinerary)
         {
             context.Entry(travelItinerary).State = EntityState.Modified;
         }
 
-        public void DeleteTravelItinerary(int travelItineraryId)
+        public void Delete(int travelItineraryId)
         {
             TravelItinerary travelItinerary = context.TravelItineraries.Find(travelItineraryId);
             context.TravelItineraries.Remove(travelItinerary);
         }
 
-        public IEnumerable<TravelItinerary> GetAllTravelItineraries(int userId)
+        public IEnumerable<TravelItinerary> GetAll(int userId)
         {
             return context.TravelItineraries.ToList();
         }
 
-        public TravelItinerary GetTravelItinerary(int travelItineraryId)
+        public TravelItinerary GetById(int travelItineraryId)
         {
             return context.TravelItineraries.Find(travelItineraryId);
         }

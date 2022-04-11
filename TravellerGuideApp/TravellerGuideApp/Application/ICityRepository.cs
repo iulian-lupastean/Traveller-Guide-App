@@ -4,10 +4,10 @@ namespace TravelerGuideApp.Application
 {
     public interface ICityRepository
     {
-        void CreateCity(City city);
-        void UpdateCity(City city);
-        void DeleteCity(int cityId);
-        City GetCityById(int cityId);
-        IEnumerable<City> GetCities();
+        void Create(City city);
+        void Update(City city);
+        void Delete(int cityId);
+        City GetById(int cityId);
+        IEnumerable<City> GetAll();
     }
 }

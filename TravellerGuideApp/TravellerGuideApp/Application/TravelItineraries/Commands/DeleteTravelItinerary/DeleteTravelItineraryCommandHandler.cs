@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.TravelItineraries.Commands.DeleteTravelIt
 
         public Task<int> Handle(DeleteTravelItineraryCommand query, CancellationToken cancellationToken)
         {
-            _repository.DeleteTravelItinerary(query.Id);
+            _repository.Delete(query.Id);
             return Task.FromResult(query.Id);
         }
     }

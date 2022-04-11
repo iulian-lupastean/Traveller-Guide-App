@@ -14,28 +14,28 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             this.context = context;
         }
 
-        public void CreateUser(User user)
+        public void Create(User user)
         {
             context.Users.Add(user);
         }
 
-        public void UpdateUser(User user)
+        public void Update(User user)
         {
             context.Entry(user).State = EntityState.Modified;
         }
 
-        public void DeleteUser(int userId)
+        public void Delete(int userId)
         {
             User user = context.Users.Find(userId);
             context.Users.Remove(user);
         }
 
-        public User GetUser(int userId)
+        public User GetById(int userId)
         {
             return context.Users.Find(userId);
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<User> GetAll()
         {
             return context.Users.ToList();
         }

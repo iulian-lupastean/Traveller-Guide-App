@@ -4,10 +4,10 @@ namespace TravelerGuideApp.Application
 {
     public interface IUserRepository
     {
-        void CreateUser(User user);
-        void UpdateUser(User user);
-        void DeleteUser(int userId);
-        User GetUser(int userId);
-        IEnumerable<User> GetAllUsers();
+        void Create(User user);
+        void Update(User user);
+        void Delete(int userId);
+        User GetById(int userId);
+        IEnumerable<User> GetAll();
     }
 }

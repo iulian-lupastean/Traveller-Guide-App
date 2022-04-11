@@ -15,7 +15,7 @@ namespace TravelerGuideApp.Application.Users.Commands.UpdateUser
         public Task<int> Handle(UpdateUserCommand command, CancellationToken cancellationToken)
         {
             var user = new User(command.FirstName, command.LastName, command.Email, command.Password, command.UserType);
-            _repository.UpdateUser(user);
+            _repository.Update(user);
             return Task.FromResult(user.Id);
         }
     }

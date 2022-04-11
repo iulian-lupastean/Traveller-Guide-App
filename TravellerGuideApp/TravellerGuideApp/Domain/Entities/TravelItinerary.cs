@@ -17,10 +17,11 @@ public class TravelItinerary
     [MaxLength(50)]
     [Required]
     public string Name { get; set; }
-    [MaxLength(50)]
+    [MaxLength(30)]
     [Required]
     public string Status { get; set; }
-    [MaxLength(50)]
+    [MinLength(8)]
+    [MaxLength(10)]
     [Required]
     public DateTime TravelDate { get; set; }
     public int UserId { get; set; }

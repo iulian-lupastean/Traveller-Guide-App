@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Cities.Queries.GetCities
 
         public Task<IEnumerable<CitiesListVm>> Handle(GetCitiesListQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetCities().Select(city => new CitiesListVm
+            var result = _repository.GetAll().Select(city => new CitiesListVm
             {
                 Id = city.Id,
                 Name = city.Name,

@@ -14,7 +14,7 @@ namespace TravelerGuideApp.Application.Users.Commands.CreateUser
         public Task<int> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
             var user = new User(command.FirstName, command.LastName, command.Email, command.Password, command.UserType);
-            _repository.CreateUser(user);
+            _repository.Create(user);
 
             return Task.FromResult(user.Id);
         }

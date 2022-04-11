@@ -1,4 +1,6 @@
-﻿namespace TravelerGuideApp.Domain.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TravelerGuideApp.Domain.Entities;
 
 public class User
 {
@@ -14,15 +16,22 @@ public class User
     {
     }
     public int Id { get; set; }
-
+    [MaxLength(50)]
+    [Required]
     public string FirstName { get; set; }
-
+    [MaxLength(50)]
+    [Required]
     public string LastName { get; set; }
-
+    [MaxLength(50)]
+    [Required]
     public string Email { get; set; }
-
+    [MaxLength(50)]
+    [MinLength(10)]
+    [Required]
     public string Password { get; set; }
-
+    [MaxLength(50)]
+    [MinLength(5)]
+    [Required]
     public string UserType { get; set; }
     public List<TravelItinerary> TravelItineraries { get; set; }
 }

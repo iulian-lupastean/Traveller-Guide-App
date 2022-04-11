@@ -14,7 +14,7 @@ namespace TravelerGuideApp.Application.Cities.Queries.GetCityById
 
         public Task<City> Handle(GetCityByIdQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetCityById(query.Id);
+            var result = _repository.GetById(query.Id);
 
             return Task.FromResult(result);
         }

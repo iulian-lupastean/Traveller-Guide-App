@@ -13,7 +13,7 @@ namespace TravelerGuideApp.Application.Cities.Commands.DeleteCity
 
         public Task<int> Handle(DeleteCityCommand query, CancellationToken cancellationToken)
         {
-            _repository.DeleteCity(query.Id);
+            _repository.Delete(query.Id);
 
             return Task.FromResult(query.Id);
         }
