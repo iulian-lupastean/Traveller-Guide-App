@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TravelerGuideApp.Application;
+using TravelerGuideApp.Application.Interfaces;
 using TravelerGuideApp.Domain.Entities;
 using TravelerGuideApp.Infrastructure.Database.DatabaseContext;
 
@@ -19,6 +20,18 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             context.TravelItineraries.Add(travelItinerary);
         }
 
+        public void CreateTravelItineraryLocation(TravelItinerary travelItinerary)
+        {
+            foreach (var location in travelItinerary.Locations)
+            {
+                context.TravelItineraryLocations.Add(new TravelItineraryLocations
+                {
+                    TravelItineraryId = travelItinerary.Id,
+                    LocationId = location.Id
+                });
+            }
+        }
+
         public void Update(TravelItinerary travelItinerary)
         {
             context.Entry(travelItinerary).State = EntityState.Modified;
@@ -29,6 +42,29 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             TravelItinerary travelItinerary = context.TravelItineraries.Find(travelItineraryId);
             context.TravelItineraries.Remove(travelItinerary);
         }
+
+        public void AddLocationsToTravelItinerary(int travelItineraryId, int locationId)
+        {
+            var travelItinerary = context.TravelItineraries.Find(travelItineraryId);
+            var location = context.Locations.Find(locationId);
+            if (travelItinerary != null && location != null)
+            {
+                travelItinerary.Locations.Add(location);
+                context.TravelItineraries.Add(travelItinerary);
+            }
+        }
+
+        public void RemoveLocationsFromTravelItinerary(int travelItineraryId, int locationId)
+        {
+            var travelItinerary = context.TravelItineraries.Find(travelItineraryId);
+            var location = context.Locations.Find(locationId);
+            if (travelItinerary != null && location != null)
+            {
+                travelItinerary.Locations.Remove(location);
+                context.TravelItineraries.Add(travelItinerary);
+            }
+        }
+
 
         public IEnumerable<TravelItinerary> GetAll(int userId)
         {

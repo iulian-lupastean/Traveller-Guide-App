@@ -2,6 +2,40 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Dinatar.Handlers.Abstractions/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Handlers.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Handlers.Abstractions.dll": {}
+        }
+      },
+      "Dinatar.Handlers.Mediator/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Dinatar.Handlers.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Handlers.Mediator.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Handlers.Mediator.dll": {}
+        }
+      },
+      "Dinatar.Handlers.Mediator.Registration.ServiceCollection/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Dinatar.Handlers.Mediator": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Handlers.Mediator.Registration.ServiceCollection.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Handlers.Mediator.Registration.ServiceCollection.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -30,6 +64,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {}
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/10.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.CSharp/4.5.0": {
@@ -715,6 +762,42 @@
     }
   },
   "libraries": {
+    "Dinatar.Handlers.Abstractions/1.0.0": {
+      "sha512": "VgOw79UG+yQNUXULXtq5/l5bFlbramipvRsx0wbOtcCrGe2IRUpGzp0qWecGCBU5yu7E/XSbQ64AuBEejNFWYw==",
+      "type": "package",
+      "path": "dinatar.handlers.abstractions/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dinatar.handlers.abstractions.1.0.0.nupkg.sha512",
+        "dinatar.handlers.abstractions.nuspec",
+        "lib/netcoreapp3.1/Handlers.Abstractions.dll"
+      ]
+    },
+    "Dinatar.Handlers.Mediator/1.0.0": {
+      "sha512": "r+mVB0hBV4IiZovHVToShjBaW1YQl/zPynbWqKt+4SxourEkONppeRSwS3Gyry7RgOpCBc1Xa4SRVlOtKE6bmA==",
+      "type": "package",
+      "path": "dinatar.handlers.mediator/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dinatar.handlers.mediator.1.0.0.nupkg.sha512",
+        "dinatar.handlers.mediator.nuspec",
+        "lib/netcoreapp3.1/Handlers.Mediator.dll"
+      ]
+    },
+    "Dinatar.Handlers.Mediator.Registration.ServiceCollection/1.0.0": {
+      "sha512": "CWOmyzeEzWOQJFXfHJbGvzvoN1OMtRdK/zB6SSkFJxEnLQu+lob5n2JG9uB/3Sfh0X/qGTd+ECKdh7+W+yYqyg==",
+      "type": "package",
+      "path": "dinatar.handlers.mediator.registration.servicecollection/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dinatar.handlers.mediator.registration.servicecollection.1.0.0.nupkg.sha512",
+        "dinatar.handlers.mediator.registration.servicecollection.nuspec",
+        "lib/netcoreapp3.1/Handlers.Mediator.Registration.ServiceCollection.dll"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -759,6 +842,19 @@
         "lib/netstandard2.0/MediatR.Contracts.xml",
         "mediatr.contracts.1.0.1.nupkg.sha512",
         "mediatr.contracts.nuspec"
+      ]
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/10.0.1": {
+      "sha512": "mYdfMvpkahCAj4tRfBoeMlUBZa2WthaONdQ4y5TtIyxcZYb5e7AE7c1eITTZVWcQhguxvD8AdExdaiAW6RhrVA==",
+      "type": "package",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/10.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
+        "mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+        "mediatr.extensions.microsoft.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -2113,7 +2209,9 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Dinatar.Handlers.Mediator.Registration.ServiceCollection >= 1.0.0",
       "MediatR >= 10.0.1",
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
       "Microsoft.EntityFrameworkCore >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.3",
@@ -2160,7 +2258,15 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Dinatar.Handlers.Mediator.Registration.ServiceCollection": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "MediatR": {
+            "target": "Package",
+            "version": "[10.0.1, )"
+          },
+          "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[10.0.1, )"
           },

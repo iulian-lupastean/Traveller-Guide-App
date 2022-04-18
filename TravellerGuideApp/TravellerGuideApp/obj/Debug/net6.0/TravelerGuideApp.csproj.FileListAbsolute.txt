@@ -64,3 +64,7 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravelerGuideApp.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\TravelerGuideApp.genruntimeconfig.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\obj\Debug\net6.0\ref\TravelerGuideApp.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\Handlers.Abstractions.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\Handlers.Mediator.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\Handlers.Mediator.Registration.ServiceCollection.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravellerGuideApp\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

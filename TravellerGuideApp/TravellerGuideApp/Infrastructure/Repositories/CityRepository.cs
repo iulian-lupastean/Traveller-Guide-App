@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TravelerGuideApp.Application;
+using TravelerGuideApp.Application.Interfaces;
 using TravelerGuideApp.Domain.Entities;
 using TravelerGuideApp.Infrastructure.Database.DatabaseContext;
 
@@ -34,6 +35,8 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         {
             return context.Cities.Find(CityId);
         }
+
+
 
         public IEnumerable<City> GetAll()
         {

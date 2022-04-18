@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "X094psC0+u2LxMM0T1KOOmxdj4Zpjp6PbN5SID5LAHl5YZR915JIZKUTrDAqvIVQm6A3mAzAIKG56+G1JVMaEg==",
+  "dgSpecHash": "ydRPSlQCe7xPX2t0Gp4y783LcCVNmf3+K0Lk2MV9ukQp59nfvj7K/b6WYlar+7PpPPJDUzIxJL9GwXtYFIRioA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravelerGuideApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ilupa\\.nuget\\packages\\dinatar.handlers.abstractions\\1.0.0\\dinatar.handlers.abstractions.1.0.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\dinatar.handlers.mediator\\1.0.0\\dinatar.handlers.mediator.1.0.0.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\dinatar.handlers.mediator.registration.servicecollection\\1.0.0\\dinatar.handlers.mediator.registration.servicecollection.1.0.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\ilupa\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

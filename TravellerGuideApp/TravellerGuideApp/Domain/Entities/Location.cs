@@ -8,8 +8,20 @@ public class Location
         Address = address ?? throw new ArgumentNullException(nameof(address));
         LocationType = locationType ?? throw new ArgumentNullException(nameof(locationType));
         Price = price;
-        Latitude = latitude ?? throw new ArgumentNullException(nameof(latitude));
-        Longitude = longitude ?? throw new ArgumentNullException(nameof(longitude));
+        Latitude = latitude;
+        Longitude = longitude;
+    }
+
+    public Location(int id, string name, string address, string locationType, double price, string latitude, string longitude, int cityId)
+    {
+        Id = id;
+        Name = name ?? throw new ArgumentNullException(nameof(name));
+        Address = address ?? throw new ArgumentNullException(nameof(address));
+        LocationType = locationType ?? throw new ArgumentNullException(nameof(locationType));
+        Price = price;
+        Latitude = latitude;
+        Longitude = longitude;
+        CityId = cityId;
     }
     public Location()
     {
@@ -28,8 +40,9 @@ public class Location
     public double Price { get; set; }
     public string Latitude { get; set; }
     public string Longitude { get; set; }
+    public int CityId { get; set; }
     public City? City { get; set; } = null;
-    public List<TravelItinerary> TravelItineraries { get; set; }
+    public ICollection<TravelItinerary> TravelItineraries { get; set; }
     public override string ToString()
     {
         return $"{Id} {Name} {Address} {LocationType} {Price}  {Latitude} {Longitude}";
