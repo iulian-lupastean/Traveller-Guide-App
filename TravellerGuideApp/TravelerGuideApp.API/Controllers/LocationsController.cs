@@ -24,11 +24,19 @@ namespace TravelerGuideApp.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateLocation([FromBody] LocationPutPostDto location)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var created = await _mediator.Send(_mapper.Map<CreateLocationCommand>(location));
-            var mappedResult = _mapper.Map<LocationGetDto>(created);
-            return CreatedAtAction(nameof(GetById), new { Id = mappedResult.LocationId }, mappedResult);
+            var command = new CreateLocationCommand
+            {
+                CityId = location.CityId,
+                Name = location.Name,
+                Address = location.Address,
+                LocationType = location.LocationType,
+                Price = location.Price,
+                Latitude = location.Latitude,
+                Longitude = location.Longitude
+            };
+            var result = await _mediator.Send(command);
+            var mappedResult = _mapper.Map<LocationGetDto>(result);
+            return CreatedAtAction(nameof(GetById), new { locationId = mappedResult.LocationId }, mappedResult);
         }
 
         [HttpGet]
@@ -81,29 +89,5 @@ namespace TravelerGuideApp.API.Controllers
             return NoContent();
         }
 
-        [HttpPost]
-        [Route("{cityId}/locations/{locationId}")]
-        public async Task<IActionResult> AddLocationToCity(int cityId, int locationId)
-        {
-            var command = new AddLocationToCity
-            {
-                LocationId = locationId,
-                CityId = cityId
-            };
-
-            await _mediator.Send(command);
-
-            return NoContent();
-        }
-
-        [HttpDelete]
-        [Route("{cityId}/locations/{locationId}")]
-        public async Task<IActionResult> RemoveLocationFromCity(int cityId, int locationId)
-        {
-            var command = new RemoveLocationFromCity() { CityId = cityId, LocationId = locationId };
-            await _mediator.Send(command);
-
-            return NoContent();
-        }
     }
 }

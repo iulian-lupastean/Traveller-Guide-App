@@ -28,6 +28,7 @@ namespace TravelerGuideApp.Infrastructure.Database.DatabaseContext
             modelBuilder.ApplyConfiguration(new LocationEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new TravelItineraryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new CityEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new TravelItineraryLocationsEntityTypeConfiguration());
         }
     }
 }

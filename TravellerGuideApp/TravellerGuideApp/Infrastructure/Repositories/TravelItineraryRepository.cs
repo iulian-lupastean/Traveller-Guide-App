@@ -20,16 +20,18 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             context.TravelItineraries.Add(travelItinerary);
         }
 
-        public void CreateTravelItineraryLocation(TravelItinerary travelItinerary)
+
+
+        public void CreateTravelItineraryLocation(TravelItinerary travelItinerary, Location Location)
         {
-            foreach (var location in travelItinerary.Locations)
+
+            context.TravelItineraryLocations.Add(new TravelItineraryLocations
             {
-                context.TravelItineraryLocations.Add(new TravelItineraryLocations
-                {
-                    TravelItineraryId = travelItinerary.Id,
-                    LocationId = location.Id
-                });
-            }
+                TravelItineraryId = travelItinerary.Id,
+                LocationId = Location.Id,
+                TravelItinerary = travelItinerary,
+                Location = Location,
+            });
         }
 
         public void Update(TravelItinerary travelItinerary)
@@ -41,28 +43,6 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         {
             TravelItinerary travelItinerary = context.TravelItineraries.Find(travelItineraryId);
             context.TravelItineraries.Remove(travelItinerary);
-        }
-
-        public void AddLocationsToTravelItinerary(int travelItineraryId, int locationId)
-        {
-            var travelItinerary = context.TravelItineraries.Find(travelItineraryId);
-            var location = context.Locations.Find(locationId);
-            if (travelItinerary != null && location != null)
-            {
-                travelItinerary.Locations.Add(location);
-                context.TravelItineraries.Add(travelItinerary);
-            }
-        }
-
-        public void RemoveLocationsFromTravelItinerary(int travelItineraryId, int locationId)
-        {
-            var travelItinerary = context.TravelItineraries.Find(travelItineraryId);
-            var location = context.Locations.Find(locationId);
-            if (travelItinerary != null && location != null)
-            {
-                travelItinerary.Locations.Remove(location);
-                context.TravelItineraries.Add(travelItinerary);
-            }
         }
 
 

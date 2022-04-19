@@ -73,7 +73,7 @@ namespace TravelerGuideApp.Presentation
             //        Name = travel.Name,
             //        Status = travel.Status,
             //        TravelDate = travel.TravelDate,
-            //        UserId = travel.UserId
+            //        userId = travel.userId
             //    });
             //}
             await _mediator.Send(new CreateLocationCommand

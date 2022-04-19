@@ -8,7 +8,7 @@ namespace TravelerGuideApp.Infrastructure.Repositories
 {
     public class LocationRepository : ILocationRepository, IDisposable
     {
-        private TravelerGuideAppDBContext context;
+        private readonly TravelerGuideAppDBContext context;
 
         public LocationRepository(TravelerGuideAppDBContext context)
         {
@@ -28,38 +28,13 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         public void Delete(int locationId)
         {
             Location location = context.Locations.Find(locationId);
-            Console.WriteLine(location);
             context.Locations.Remove(location);
-        }
-        public void AddLocationToCity(int cityId, int locationId)
-        {
-            var location = context.Locations.Find(locationId);
-            var city = context.Cities.Find(cityId);
-            city.Locations.Add(location);
-            context.Cities.Add(city);
-        }
-
-        public void RemoveLocationFromCity(int cityId, int locationId)
-        {
-            var location = context.Locations.Find(locationId);
-            var city = context.Cities.Find(cityId);
-            city.Locations.Remove(location);
-            context.Cities.Update(city);
         }
         public Location GetById(int locationId)
         {
             return context.Locations.Find(locationId);
         }
 
-        public void SetIdentityOn()
-        {
-            context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Cities ON;");
-        }
-
-        public void SetIdentityOff()
-        {
-            context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Cities OFF;");
-        }
         public IEnumerable<Location> GetLocationsForCity()
         {
             return context.Locations.ToList();

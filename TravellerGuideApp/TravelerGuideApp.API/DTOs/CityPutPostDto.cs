@@ -7,10 +7,10 @@ namespace TravelerGuideApp.API.DTOs
         [Required]
         [MaxLength(30)]
         [MinLength(3)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [Required]
         [MaxLength(30)]
         [MinLength(3)]
-        public string Country { get; set; }
+        public string? Country { get; set; }
     }
 }

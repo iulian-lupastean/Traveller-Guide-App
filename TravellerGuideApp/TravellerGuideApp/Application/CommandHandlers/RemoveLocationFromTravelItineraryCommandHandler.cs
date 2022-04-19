@@ -6,18 +6,18 @@ namespace TravelerGuideApp.Application.CommandHandlers
 {
     public class RemoveLocationFromTravelItineraryCommandHandler : IRequestHandler<RemoveLocationFromTravelitinerary, int>
     {
-        ITravelItineraryRepository _repository;
+        private readonly ITravelItineraryLocationsRepository _repository;
 
-        public RemoveLocationFromTravelItineraryCommandHandler(ITravelItineraryRepository repository)
+        public RemoveLocationFromTravelItineraryCommandHandler(ITravelItineraryLocationsRepository repository)
         {
             _repository = repository;
         }
 
         public Task<int> Handle(RemoveLocationFromTravelitinerary command, CancellationToken cancellationToken)
         {
-            _repository.RemoveLocationsFromTravelItinerary(command.TravelItineraryId, command.LocationId);
+            _repository.DeleteTravelItineraryLocation(command.travelItineraryId, command.LocationId);
             _repository.Save();
-            return Task.FromResult(command.TravelItineraryId);
+            return Task.FromResult(command.travelItineraryId);
         }
     }
 }

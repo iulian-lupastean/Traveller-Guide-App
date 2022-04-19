@@ -24,14 +24,12 @@ namespace TravelerGuideApp.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCity([FromBody] CityPutPostDto city)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
             var command = new CreateCityCommand
             {
                 Name = city.Name,
                 Country = city.Country
             };
-            var result = _mediator.Send(command);
+            var result = await _mediator.Send(command);
             var mappedResult = _mapper.Map<CityGetDto>(result);
             return CreatedAtAction(nameof(GetById), new { Id = mappedResult.Id }, mappedResult);
         }

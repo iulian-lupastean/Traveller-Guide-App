@@ -6,6 +6,5 @@
         public string Name { get; set; }
         public string Status { get; set; }
         public DateTime TravelDate { get; set; }
-        public ICollection<LocationPutPostDto> Locations { get; set; }
     }
 }

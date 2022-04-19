@@ -11,6 +11,5 @@ namespace TravelerGuideApp.API.DTOs
         public double Price { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-        public ICollection<TravelItineraryPutPostDto> TravelItineraries { get; set; }
     }
 }

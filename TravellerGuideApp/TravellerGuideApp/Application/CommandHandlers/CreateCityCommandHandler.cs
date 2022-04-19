@@ -5,7 +5,7 @@ using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.Application.CommandHandlers
 {
-    public class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, int>
+    public class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, City>
     {
         private readonly ICityRepository _repository;
 
@@ -14,12 +14,12 @@ namespace TravelerGuideApp.Application.CommandHandlers
             _repository = repository;
         }
 
-        public Task<int> Handle(CreateCityCommand command, CancellationToken cancellationToken)
+        public Task<City> Handle(CreateCityCommand command, CancellationToken cancellationToken)
         {
             var city = new City(command.Name, command.Country);
             _repository.Create(city);
             _repository.Save();
-            return Task.FromResult(city.Id);
+            return Task.FromResult(city);
         }
     }
 }

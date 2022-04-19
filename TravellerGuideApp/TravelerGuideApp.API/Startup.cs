@@ -35,6 +35,7 @@ namespace TravelerGuideApp.API
             services.AddScoped<ILocationRepository, LocationRepository>();
             services.AddScoped<ITravelItineraryRepository, TravelItineraryRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITravelItineraryLocationsRepository, TravelItineraryLocationsRepository>();
             services.AddDbContext<TravelerGuideAppDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.AddMediatR(typeof(CreateCityCommand));

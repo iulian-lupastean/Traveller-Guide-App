@@ -16,7 +16,7 @@ namespace TravelerGuideApp.Application.QueryHandlers
 
         public Task<IEnumerable<TravelItinerary>> Handle(GetTravelItinerariesQuery query, CancellationToken cancellationToken)
         {
-            var result = _repository.GetAll(query.UserId);
+            var result = _repository.GetAll(query.userId);
             return Task.FromResult(result);
         }
     }

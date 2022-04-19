@@ -27,14 +27,14 @@ namespace TravelerGuideApp.API.Controllers
                 return BadRequest(ModelState);
             var created = await _mediator.Send(_mapper.Map<CreateTravelItineraryCommand>(travelItinerary));
             var mappedResult = _mapper.Map<TravelItineraryGetDto>(created);
-            return CreatedAtAction(nameof(GetById), new { Id = mappedResult.TravelId }, mappedResult);
+            return CreatedAtAction(nameof(GetById), new { travelItineraryId = mappedResult.TravelId }, mappedResult);
         }
 
         [HttpGet]
-        [Route("{userId}")]
+        [Route("user/{userId}")]
         public async Task<IActionResult> GetAllForUser(int userId)
         {
-            var result = await _mediator.Send(new GetTravelItinerariesQuery { UserId = userId });
+            var result = await _mediator.Send(new GetTravelItinerariesQuery { userId = userId });
             if (result == null)
                 return NotFound();
             var mappedResult = _mapper.Map<List<TravelItineraryGetDto>>(result);
@@ -80,33 +80,6 @@ namespace TravelerGuideApp.API.Controllers
                 return NotFound();
             return NoContent();
         }
-
-        [HttpPost]
-        [Route("{travelItineraryId}/locations/{locationId}")]
-        public async Task<IActionResult> AddLocationToTravelItinerary(int travelItineraryId, int locationId)
-        {
-            var command = new AddLocationsToTravelItinerary
-            {
-                TravelItineraryId = travelItineraryId,
-                LocationId = locationId
-            };
-            await _mediator.Send(command);
-            return NoContent();
-        }
-
-        [HttpDelete]
-        [Route("{travelItineraryId}/locations/{locationId}")]
-        public async Task<IActionResult> RemoveLocationFromTravelItinerary(int travelItineraryId, int locationId)
-        {
-            var command = new RemoveLocationFromTravelitinerary
-            {
-                TravelItineraryId = travelItineraryId,
-                LocationId = locationId
-            };
-            await _mediator.Send(command);
-            return NoContent();
-        }
-
     }
 
 }

@@ -5,7 +5,7 @@ using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.Application.CommandHandlers
 {
-    public class UpdateTravelItineraryCommandHandler : IRequestHandler<UpdateTravelItineraryCommand, int>
+    public class UpdateTravelItineraryCommandHandler : IRequestHandler<UpdateTravelItineraryCommand, TravelItinerary>
     {
         private readonly ITravelItineraryRepository _repository;
 
@@ -14,12 +14,15 @@ namespace TravelerGuideApp.Application.CommandHandlers
             _repository = repository;
         }
 
-        public Task<int> Handle(UpdateTravelItineraryCommand command, CancellationToken cancellationToken)
+        public Task<TravelItinerary> Handle(UpdateTravelItineraryCommand command, CancellationToken cancellationToken)
         {
-            var travelItinerary = new TravelItinerary(command.Id, command.Name, command.Status, command.TravelDate);
+            var travelItinerary = _repository.GetById(command.Id);
+            travelItinerary.Name = command.Name;
+            travelItinerary.Status = command.Status;
+            travelItinerary.TravelDate = command.TravelDate;
             _repository.Update(travelItinerary);
             _repository.Save();
-            return Task.FromResult(travelItinerary.Id);
+            return Task.FromResult(travelItinerary);
         }
     }
 }

@@ -24,11 +24,10 @@ namespace TravelerGuideApp.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] UserPutPostDto user)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+
             var created = await _mediator.Send(_mapper.Map<CreateUserCommand>(user));
             var mappedResult = _mapper.Map<UserGetDto>(created);
-            return CreatedAtAction(nameof(GetById), new { Id = mappedResult.UserId }, mappedResult);
+            return CreatedAtAction(nameof(GetById), new { userId = mappedResult.userId }, mappedResult);
         }
 
         [HttpGet]
@@ -41,9 +40,9 @@ namespace TravelerGuideApp.API.Controllers
 
         [HttpGet]
         [Route("{userId}")]
-        public async Task<IActionResult> GetById(int userid)
+        public async Task<IActionResult> GetById(int userId)
         {
-            var result = await _mediator.Send(new GetUserByIdQuery { Id = userid });
+            var result = await _mediator.Send(new GetUserByIdQuery { Id = userId });
             if (result == null)
                 return NotFound();
             var mappedResult = _mapper.Map<UserGetDto>(result);

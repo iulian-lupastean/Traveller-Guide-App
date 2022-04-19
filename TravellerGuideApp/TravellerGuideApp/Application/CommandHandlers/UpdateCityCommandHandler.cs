@@ -16,7 +16,9 @@ namespace TravelerGuideApp.Application.CommandHandlers
 
         public Task<int> Handle(UpdateCityCommand command, CancellationToken cancellationToken)
         {
-            var city = new City(command.Id, command.Name, command.Country);
+            var city = _repository.GetById(command.Id);
+            city.Name = command.Name;
+            city.Country = command.Country;
             _repository.Update(city);
             _repository.Save();
             return Task.FromResult(city.Id);

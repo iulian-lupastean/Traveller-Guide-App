@@ -4,13 +4,14 @@ using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.Application.Commands
 {
-    public class CreateLocationCommand : IRequest<int>
+    public class CreateLocationCommand : IRequest<Location>
     {
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string LocationType { get; set; }
+        public int CityId { get; set; }
+        public string? Name { get; set; }
+        public string? Address { get; set; }
+        public string? LocationType { get; set; }
         public double Price { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public string? Latitude { get; set; }
+        public string? Longitude { get; set; }
     }
 }

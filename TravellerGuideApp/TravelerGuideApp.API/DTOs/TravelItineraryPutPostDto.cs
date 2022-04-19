@@ -6,13 +6,11 @@ namespace TravelerGuideApp.API.DTOs
     {
         [MaxLength(50)]
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [MaxLength(30)]
         [Required]
-        public string Status { get; set; }
-        [MinLength(8)]
-        [MaxLength(10)]
-        [Required]
+        public string? Status { get; set; }
         public DateTime TravelDate { get; set; }
+        public int userId { get; set; }
     }
 }

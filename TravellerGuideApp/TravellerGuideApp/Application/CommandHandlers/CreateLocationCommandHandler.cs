@@ -5,7 +5,7 @@ using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.Application.CommandHandlers
 {
-    public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand, int>
+    public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand, Location>
     {
         private readonly ILocationRepository _repository;
 
@@ -13,12 +13,12 @@ namespace TravelerGuideApp.Application.CommandHandlers
         {
             _repository = repository;
         }
-        public Task<int> Handle(CreateLocationCommand command, CancellationToken cancellationToken)
+        public Task<Location> Handle(CreateLocationCommand command, CancellationToken cancellationToken)
         {
-            var location = new Location(command.Name, command.Address, command.LocationType, command.Price, command.Latitude, command.Longitude);
+            var location = new Location(command.CityId, command.Name, command.Address, command.LocationType, command.Price, command.Latitude, command.Longitude);
             _repository.Create(location);
             _repository.Save();
-            return Task.FromResult(location.Id);
+            return Task.FromResult(location);
         }
     }
 }
