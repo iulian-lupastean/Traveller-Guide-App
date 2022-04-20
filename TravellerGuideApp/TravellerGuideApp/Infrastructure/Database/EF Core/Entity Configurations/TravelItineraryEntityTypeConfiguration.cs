@@ -12,7 +12,7 @@ namespace TravelerGuideApp.Infrastructure.Database.EF_Core.Entity_Configurations
 
             travelItineraryConfiguration.HasOne(travel => travel.User)
                 .WithMany(user => user.TravelItineraries)
-                .HasForeignKey(travel => travel.UserId);
+                .HasForeignKey(travel => travel.UserId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

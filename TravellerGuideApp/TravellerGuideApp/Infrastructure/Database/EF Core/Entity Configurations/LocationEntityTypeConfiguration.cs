@@ -10,7 +10,7 @@ namespace TravelerGuideApp.Infrastructure.Database.EF_Core.Entity_Configurations
         {
             locationConfiguration.HasKey(location => location.Id);
             locationConfiguration.HasOne(location => location.City)
-                .WithMany(city => city.Locations);
+                .WithMany(city => city.Locations).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

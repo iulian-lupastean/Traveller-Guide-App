@@ -12,8 +12,8 @@ using TravelerGuideApp.Infrastructure.Database.DatabaseContext;
 namespace TravelerGuideApp.Migrations
 {
     [DbContext(typeof(TravelerGuideAppDBContext))]
-    [Migration("20220418124754_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20220420123754_modifyDatabase")]
+    partial class modifyDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,12 +110,12 @@ namespace TravelerGuideApp.Migrations
                     b.Property<DateTime>("TravelDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("userId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("TravelItineraries");
                 });
@@ -177,7 +177,8 @@ namespace TravelerGuideApp.Migrations
                 {
                     b.HasOne("TravelerGuideApp.Domain.Entities.City", "City")
                         .WithMany("Locations")
-                        .HasForeignKey("CityId");
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("City");
                 });
@@ -186,7 +187,7 @@ namespace TravelerGuideApp.Migrations
                 {
                     b.HasOne("TravelerGuideApp.Domain.Entities.User", "User")
                         .WithMany("TravelItineraries")
-                        .HasForeignKey("userId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
