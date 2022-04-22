@@ -1,6 +1,3 @@
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.deps.json
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.runtimeconfig.json
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.exe
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\appsettings.json
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.API.exe
@@ -10,9 +7,6 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.API.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Handlers.Abstractions.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Handlers.Mediator.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Handlers.Mediator.Registration.ServiceCollection.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\MediatR.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\MediatR.Contracts.dll
@@ -36,7 +30,6 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\System.Data.SqlClient.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\System.Runtime.Caching.dll
@@ -50,18 +43,11 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.dll
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\TravelerGuideApp.API.csproj.AssemblyReference.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\TravelerGuideApp.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\TravelerGuideApp.API.AssemblyInfoInputs.cache
@@ -78,3 +64,9 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\TravelerGuideApp.API.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\TravelerGuideApp.API.genruntimeconfig.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\obj\Debug\net6.0\ref\TravelerGuideApp.API.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Application.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Domain.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.dll
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Application.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.API\bin\Debug\net6.0\TravelerGuideApp.Domain.pdb
