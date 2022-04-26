@@ -37,8 +37,10 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         public void DeleteTravelItineraryLocation(int travelItineraryId, int LocationId)
         {
             var travelItineraryLocation = context.TravelItineraryLocations.Find(travelItineraryId, LocationId);
-            context.TravelItineraryLocations.Remove(travelItineraryLocation);
-
+            if (travelItineraryLocation != null)
+            {
+                context.TravelItineraryLocations.Remove(travelItineraryLocation);
+            }
         }
 
         public IEnumerable<Location> GetLocationsForTravelItinerary(int travelItineraryId)

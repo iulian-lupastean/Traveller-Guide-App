@@ -28,7 +28,10 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         public void Delete(int userId)
         {
             User user = context.Users.Find(userId);
-            context.Users.Remove(user);
+            if (user != null)
+            {
+                context.Users.Remove(user);
+            }
         }
 
         public User GetById(int userId)

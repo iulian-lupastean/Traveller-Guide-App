@@ -31,7 +31,7 @@ namespace TravelerGuideApp.API.Controllers
             };
             var result = await _mediator.Send(command);
             var mappedResult = _mapper.Map<CityGetDto>(result);
-            return CreatedAtAction(nameof(GetById), new { Id = mappedResult.Id }, mappedResult);
+            return Ok(mappedResult);
         }
 
         [HttpGet]
@@ -39,9 +39,10 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _mediator.Send(new GetCityByIdQuery { Id = id });
-            if (result == null)
-                return NotFound();
+
             var mappedResult = _mapper.Map<CityGetDto>(result);
+            if (mappedResult == null)
+                return NotFound();
             return Ok(mappedResult);
 
         }
@@ -63,12 +64,12 @@ namespace TravelerGuideApp.API.Controllers
                 Id = id,
                 Name = updatedCity.Name,
                 Country = updatedCity.Country,
-
             };
             var result = await _mediator.Send(command);
-            if (result == null)
+            var mappedResult = _mapper.Map<CityGetDto>(result);
+            if (mappedResult == null)
                 return NotFound();
-            return NoContent();
+            return Ok(result);
         }
 
         [HttpDelete]
@@ -76,8 +77,6 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> DeleteCity(int id)
         {
             var result = await _mediator.Send(new DeleteCityCommand { Id = id });
-            if (result == null)
-                return NotFound();
             return NoContent();
         }
     }

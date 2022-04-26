@@ -35,8 +35,9 @@ namespace TravelerGuideApp.API.Profiles
                 .ForMember(l => l.Latitude, opt => opt.MapFrom(s => s.Latitude))
                 .ForMember(l => l.Longitude, opt => opt.MapFrom(s => s.Longitude))
                 .ReverseMap();
-            CreateMap<LocationGetDto, Location>()
-                .ForMember(l => l.Id, opt => opt.MapFrom(s => s.LocationId))
+
+            CreateMap<LocationPutPostDto, UpdateLocationCommand>()
+                .ForMember(l => l.CityId, opt => opt.MapFrom(s => s.CityId))
                 .ForMember(l => l.Name, opt => opt.MapFrom(s => s.Name))
                 .ForMember(l => l.Address, opt => opt.MapFrom(s => s.Address))
                 .ForMember(l => l.LocationType, opt => opt.MapFrom(s => s.LocationType))

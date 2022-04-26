@@ -27,12 +27,16 @@ namespace TravelerGuideApp.Infrastructure.Repositories
 
         public void Delete(int locationId)
         {
-            Location location = context.Locations.Find(locationId);
+            var location = context.Locations.Find(locationId);
+
             context.Locations.Remove(location);
+
         }
         public Location GetById(int locationId)
         {
-            return context.Locations.Find(locationId);
+            var location = context.Locations.Find(locationId);
+
+            return location;
         }
 
         public IEnumerable<Location> GetLocationsForCity()

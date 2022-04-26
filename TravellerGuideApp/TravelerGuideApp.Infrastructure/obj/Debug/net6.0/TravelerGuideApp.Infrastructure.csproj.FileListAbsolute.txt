@@ -1,8 +1,3 @@
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.AssemblyInfo.cs
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.deps.json
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.runtimeconfig.json
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.dll
@@ -11,6 +6,11 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\Tra
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Domain.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Application.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\bin\Debug\net6.0\TravelerGuideApp.Domain.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.csproj.CopyComplete
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\TravelerGuideApp.Infrastructure.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\TravelerGuideApp.Infrastructure\obj\Debug\net6.0\refint\TravelerGuideApp.Infrastructure.dll

@@ -17,16 +17,21 @@ namespace TravelerGuideApp.Application.CommandHandlers
         public Task<Location> Handle(UpdateLocationCommand command, CancellationToken cancellationToken)
         {
             var location = _repository.GetById(command.Id);
+            if (location == null)
+            {
+                return Task.FromResult(location);
+            }
             location.Name = command.Name;
             location.Address = command.Address;
             location.LocationType = command.LocationType;
             location.Price = command.Price;
-            location.CityId = command.CityId;
             location.Latitude = command.Latitude;
             location.Longitude = command.Longitude;
+            location.CityId = command.CityId;
             _repository.Update(location);
             _repository.Save();
             return Task.FromResult(location);
+
         }
     }
 }

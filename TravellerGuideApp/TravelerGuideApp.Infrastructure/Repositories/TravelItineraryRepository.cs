@@ -42,13 +42,16 @@ namespace TravelerGuideApp.Infrastructure.Repositories
         public void Delete(int travelItineraryId)
         {
             TravelItinerary travelItinerary = context.TravelItineraries.Find(travelItineraryId);
-            context.TravelItineraries.Remove(travelItinerary);
+            if (travelItinerary != null)
+            {
+                context.TravelItineraries.Remove(travelItinerary);
+            }
         }
 
 
         public IEnumerable<TravelItinerary> GetAll(int userId)
         {
-            return context.TravelItineraries.ToList();
+            return context.TravelItineraries.Where(x => x.UserId == userId).Select(x => x).ToList();
         }
 
         public TravelItinerary GetById(int travelItineraryId)

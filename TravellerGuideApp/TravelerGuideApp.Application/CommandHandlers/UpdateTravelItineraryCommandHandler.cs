@@ -17,6 +17,10 @@ namespace TravelerGuideApp.Application.CommandHandlers
         public Task<TravelItinerary> Handle(UpdateTravelItineraryCommand command, CancellationToken cancellationToken)
         {
             var travelItinerary = _repository.GetById(command.Id);
+            if (travelItinerary == null)
+            {
+                return Task.FromResult(travelItinerary);
+            }
             travelItinerary.Name = command.Name;
             travelItinerary.Status = command.Status;
             travelItinerary.TravelDate = command.TravelDate;

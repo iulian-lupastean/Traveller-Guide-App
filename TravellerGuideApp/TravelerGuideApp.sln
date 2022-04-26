@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelerGuideApp.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelerGuideApp.API", "TravelerGuideApp.API\TravelerGuideApp.API.csproj", "{E87E8ECE-1818-44C3-8039-CCBFD664282E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerGuideApp.Application", "TravelerGuideApp.Application\TravelerGuideApp.Application.csproj", "{3E17612A-CB9E-4267-8CDF-63E102E70E8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelerGuideApp.Application", "TravelerGuideApp.Application\TravelerGuideApp.Application.csproj", "{3E17612A-CB9E-4267-8CDF-63E102E70E8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerGuideApp.Infrastructure", "TravelerGuideApp.Infrastructure\TravelerGuideApp.Infrastructure.csproj", "{D9F79BFA-E9FF-4998-804C-3F24B727E68C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelerGuideApp.Infrastructure", "TravelerGuideApp.Infrastructure\TravelerGuideApp.Infrastructure.csproj", "{D9F79BFA-E9FF-4998-804C-3F24B727E68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore Modeling Assignment", "EFCore Modeling Assignment\EFCore Modeling Assignment.csproj", "{C9137FD0-9568-469F-A7A2-A2B168EDD726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore Modeling Assignment", "EFCore Modeling Assignment\EFCore Modeling Assignment.csproj", "{C9137FD0-9568-469F-A7A2-A2B168EDD726}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelerGuideApp.UnitTests", "TravelerGuideApp.UnitTests\TravelerGuideApp.UnitTests.csproj", "{66F1B500-A49B-4DBA-B64B-D3FC34E117D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerGuideApp.IntegrationTests", "TravelerGuideApp.IntegrationTests\TravelerGuideApp.IntegrationTests.csproj", "{EE05411B-6A48-41DA-B0E5-065CB382F554}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{C9137FD0-9568-469F-A7A2-A2B168EDD726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9137FD0-9568-469F-A7A2-A2B168EDD726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9137FD0-9568-469F-A7A2-A2B168EDD726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F1B500-A49B-4DBA-B64B-D3FC34E117D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F1B500-A49B-4DBA-B64B-D3FC34E117D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F1B500-A49B-4DBA-B64B-D3FC34E117D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F1B500-A49B-4DBA-B64B-D3FC34E117D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE05411B-6A48-41DA-B0E5-065CB382F554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE05411B-6A48-41DA-B0E5-065CB382F554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE05411B-6A48-41DA-B0E5-065CB382F554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE05411B-6A48-41DA-B0E5-065CB382F554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,6 @@ namespace TravelerGuideApp.API
             services.AddScoped<IScopedService, ScopedService>();
             services.AddTransient<ITransientService, TransientService>();
             services.AddScoped<ICityRepository, CityRepository>();
-            services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<ILocationRepository, LocationRepository>();
             services.AddScoped<ITravelItineraryRepository, TravelItineraryRepository>();
             services.AddScoped<IUserRepository, UserRepository>();

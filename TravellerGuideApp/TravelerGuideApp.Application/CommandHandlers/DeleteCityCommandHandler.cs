@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using TravelerGuideApp.Application.Commands;
 using TravelerGuideApp.Application.Interfaces;
+using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.Application.CommandHandlers
 {
@@ -15,8 +16,10 @@ namespace TravelerGuideApp.Application.CommandHandlers
 
         public Task<int> Handle(DeleteCityCommand query, CancellationToken cancellationToken)
         {
+
             _repository.Delete(query.Id);
             _repository.Save();
+
             return Task.FromResult(query.Id);
         }
 

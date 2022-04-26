@@ -11,10 +11,13 @@ public class City
         Name = name ?? throw new ArgumentNullException(nameof(name));
         Country = country ?? throw new ArgumentNullException(nameof(country));
     }
+
+
+
     public int Id { get; set; }
     [MaxLength(50)]
     [Required]
-    public string? Name { get; set; }
+    public string Name { get; set; }
     [MaxLength(50)]
     [Required]
     public string? Country { get; set; }

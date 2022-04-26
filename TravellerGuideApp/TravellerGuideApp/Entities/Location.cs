@@ -20,7 +20,6 @@ public class Location
         CityId = cityId;
     }
 
-
     public int Id { get; set; }
     [MaxLength(50)]
     [Required]

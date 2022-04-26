@@ -15,7 +15,7 @@ namespace TravelerGuideApp.API.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public UserController(IMediator mediator, IMapper mapper)
+        public UserController(IMapper mapper, IMediator mediator)
         {
             _mediator = mediator;
             _mapper = mapper;
@@ -27,7 +27,7 @@ namespace TravelerGuideApp.API.Controllers
 
             var created = await _mediator.Send(_mapper.Map<CreateUserCommand>(user));
             var mappedResult = _mapper.Map<UserGetDto>(created);
-            return CreatedAtAction(nameof(GetById), new { userId = mappedResult.userId }, mappedResult);
+            return Ok(mappedResult);
         }
 
         [HttpGet]
@@ -43,9 +43,9 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> GetById(int userId)
         {
             var result = await _mediator.Send(new GetUserByIdQuery { Id = userId });
-            if (result == null)
-                return NotFound();
             var mappedResult = _mapper.Map<UserGetDto>(result);
+            if (mappedResult == null)
+                return NotFound();
             return Ok(mappedResult);
         }
 
@@ -63,9 +63,10 @@ namespace TravelerGuideApp.API.Controllers
                 UserType = updatedUser.UserType
             };
             var result = await _mediator.Send(command);
-            if (result == null)
+            var mappedUser = _mapper.Map<UserGetDto>(result);
+            if (mappedUser == null)
                 return NotFound();
-            return NoContent();
+            return Ok(mappedUser);
         }
 
         [HttpDelete]

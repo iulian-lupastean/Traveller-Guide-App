@@ -31,6 +31,12 @@ namespace TravelerGuideApp.API.Profiles
                 .ForMember(u => u.Password, opt => opt.MapFrom(s => s.Password))
                 .ForMember(u => u.UserType, opt => opt.MapFrom(s => s.UserType))
                 .ReverseMap();
+            CreateMap<CreateUserCommand, UserGetDto>()
+                .ForMember(u => u.FirstName, opt => opt.MapFrom(s => s.FirstName))
+                .ForMember(u => u.LastName, opt => opt.MapFrom(s => s.LastName))
+                .ForMember(u => u.Email, opt => opt.MapFrom(s => s.Email))
+                .ForMember(u => u.UserType, opt => opt.MapFrom(s => s.UserType))
+                .ReverseMap();
 
         }
     }

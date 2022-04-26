@@ -17,16 +17,13 @@ namespace TravelerGuideApp.Infrastructure.Database.DatabaseContext
         }
 
 
-        public DbSet<City> Cities { get; set; }
+        public DbSet<City?> Cities { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<TravelItinerary> TravelItineraries { get; set; }
         public DbSet<TravelItineraryLocations> TravelItineraryLocations { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-4NUOG8A;Database=TravelerGuideApp;Trusted_Connection=True;");
-        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CityEntityTypeConfiguration());

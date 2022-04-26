@@ -5,6 +5,6 @@ namespace TravelerGuideApp.Application.Queries
 {
     public class GetTravelItinerariesQuery : IRequest<IEnumerable<TravelItinerary>>
     {
-        public int userId { get; set; }
+        public int UserId { get; set; }
     }
 }

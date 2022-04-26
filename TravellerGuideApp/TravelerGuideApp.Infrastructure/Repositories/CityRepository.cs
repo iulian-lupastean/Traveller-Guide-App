@@ -8,54 +8,56 @@ namespace TravelerGuideApp.Infrastructure.Repositories
 {
     public class CityRepository : ICityRepository, IDisposable
     {
-        private TravelerGuideAppDBContext context;
+        private readonly TravelerGuideAppDBContext _context;
 
         public CityRepository(TravelerGuideAppDBContext context)
         {
-            this.context = context;
+            this._context = context;
         }
 
-        public void Create(City city)
+        public void Create(City? city)
         {
-            context.Cities.Add(city);
+            _context.Cities.Add(city);
         }
 
         public void Update(City city)
         {
-            context.Entry(city).State = EntityState.Modified;
+
+            _context.Entry(city).State = EntityState.Modified;
+
         }
 
-        public void Delete(int CityId)
+        public void Delete(int cityId)
         {
-            City city = context.Cities.Find(CityId);
-            context.Cities.Remove(city);
+            City city = _context.Cities.Find(cityId);
+
+            _context.Cities.Remove(city);
+
         }
 
-        public City GetById(int CityId)
+        public City? GetById(int cityId)
         {
-            return context.Cities.Find(CityId);
+            return _context.Cities.Find(cityId);
         }
 
 
 
-        public IEnumerable<City> GetAll()
+        public IEnumerable<City?> GetAll()
         {
-            return context.Cities.ToList();
+            return _context.Cities.ToList();
         }
 
         public void Save()
         {
-            context.SaveChanges();
+            _context.SaveChanges();
         }
-        public bool disposed = false;
+        public bool Disposed = false;
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
-            {
-                if (disposing)
-                { context.Dispose(); }
-            }
+            if (this.Disposed) return;
+            if (disposing)
+            { _context.Dispose(); }
         }
 
         public void Dispose()

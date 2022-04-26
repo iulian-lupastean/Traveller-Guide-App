@@ -30,8 +30,8 @@ namespace TravelerGuideApp.API.Controllers
                 TravelItineraryId = travelItineraryId,
                 LocationId = locationId
             };
-            await _mediator.Send(command);
-            return NoContent();
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpGet]
@@ -40,6 +40,10 @@ namespace TravelerGuideApp.API.Controllers
         {
             var result = await _mediator.Send(new GetLocationsForTravelItineraryQuery { travelItineraryId = travelItineraryId });
             var mappedResult = _mapper.Map<List<LocationGetDto>>(result);
+            if (mappedResult.Count == 0)
+            {
+                return NotFound();
+            }
             return Ok(mappedResult);
         }
 
@@ -49,6 +53,10 @@ namespace TravelerGuideApp.API.Controllers
         {
             var result = await _mediator.Send(new GetTravelItinerariesForLocationQuery { locationId = locationId });
             var mappedResult = _mapper.Map<List<TravelItineraryGetDto>>(result);
+            if (mappedResult.Count == 0)
+            {
+                return NotFound();
+            }
             return Ok(mappedResult);
         }
         [HttpDelete]

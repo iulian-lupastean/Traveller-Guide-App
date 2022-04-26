@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.API.DTOs
 {
@@ -12,5 +13,6 @@ namespace TravelerGuideApp.API.DTOs
         [MaxLength(30)]
         [MinLength(3)]
         public string? Country { get; set; }
+
     }
 }

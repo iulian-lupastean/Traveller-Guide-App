@@ -14,7 +14,7 @@ namespace TravelerGuideApp.Application.CommandHandlers
             _repository = repository;
         }
 
-        public Task<City> Handle(CreateCityCommand command, CancellationToken cancellationToken)
+        public Task<City?> Handle(CreateCityCommand command, CancellationToken cancellationToken)
         {
             var city = new City(command.Name, command.Country);
             _repository.Create(city);

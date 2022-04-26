@@ -17,6 +17,11 @@ namespace TravelerGuideApp.Application.CommandHandlers
         public Task<User> Handle(UpdateUserCommand command, CancellationToken cancellationToken)
         {
             var user = _repository.GetById(command.Id);
+            if (user == null)
+            {
+                return Task.FromResult(user);
+
+            }
             user.FirstName = command.FirstName;
             user.LastName = command.LastName;
             user.Email = command.Email;

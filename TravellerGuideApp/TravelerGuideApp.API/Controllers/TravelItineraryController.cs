@@ -27,17 +27,18 @@ namespace TravelerGuideApp.API.Controllers
                 return BadRequest(ModelState);
             var created = await _mediator.Send(_mapper.Map<CreateTravelItineraryCommand>(travelItinerary));
             var mappedResult = _mapper.Map<TravelItineraryGetDto>(created);
-            return CreatedAtAction(nameof(GetById), new { travelItineraryId = mappedResult.TravelId }, mappedResult);
+            return Ok(mappedResult);
         }
 
         [HttpGet]
         [Route("user/{userId}")]
         public async Task<IActionResult> GetAllForUser(int userId)
         {
-            var result = await _mediator.Send(new GetTravelItinerariesQuery { userId = userId });
-            if (result == null)
-                return NotFound();
+            var result = await _mediator.Send(new GetTravelItinerariesQuery { UserId = userId });
+
             var mappedResult = _mapper.Map<List<TravelItineraryGetDto>>(result);
+            if (mappedResult.Count == 0)
+                return NotFound();
             return Ok(mappedResult);
         }
 
@@ -66,9 +67,10 @@ namespace TravelerGuideApp.API.Controllers
 
             };
             var result = await _mediator.Send(command);
-            if (result == null)
+            var mappedResult = _mapper.Map<TravelItineraryGetDto>(result);
+            if (mappedResult == null)
                 return NotFound();
-            return NoContent();
+            return Ok(mappedResult);
         }
 
         [HttpDelete]
@@ -76,8 +78,6 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> DeleteTravelItinerary(int travelItineraryId)
         {
             var result = await _mediator.Send(new DeleteTravelItineraryCommand { Id = travelItineraryId });
-            if (result == null)
-                return NotFound();
             return NoContent();
         }
     }

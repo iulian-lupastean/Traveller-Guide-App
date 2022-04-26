@@ -1,8 +1,3 @@
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.csproj.AssemblyReference.cache
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.AssemblyInfoInputs.cache
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.AssemblyInfo.cs
-C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.csproj.CoreCompileInputs.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\EFCore Modeling Assignment.exe
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\EFCore Modeling Assignment.deps.json
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\EFCore Modeling Assignment.runtimeconfig.json
@@ -57,6 +52,11 @@ C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFC
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\TravelerGuideApp.Infrastructure.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\TravelerGuideApp.Domain.pdb
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\bin\Debug\net6.0\TravelerGuideApp.Application.pdb
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.csproj.AssemblyReference.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.AssemblyInfoInputs.cache
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.AssemblyInfo.cs
+C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.csproj.CoreCompileInputs.cache
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.csproj.CopyComplete
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\EFCore Modeling Assignment.dll
 C:\Users\ilupa\Desktop\Proiect Amdaris\Traveller-Guide-App\TravellerGuideApp\EFCore Modeling Assignment\obj\Debug\net6.0\refint\EFCore Modeling Assignment.dll

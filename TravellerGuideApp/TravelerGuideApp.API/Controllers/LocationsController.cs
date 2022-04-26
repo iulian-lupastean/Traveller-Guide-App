@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TravelerGuideApp.API.DTOs;
 using TravelerGuideApp.Application.Commands;
@@ -15,7 +14,7 @@ namespace TravelerGuideApp.API.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public LocationsController(IMediator mediator, IMapper mapper)
+        public LocationsController(IMapper mapper, IMediator mediator)
         {
             _mediator = mediator;
             _mapper = mapper;
@@ -36,7 +35,7 @@ namespace TravelerGuideApp.API.Controllers
             };
             var result = await _mediator.Send(command);
             var mappedResult = _mapper.Map<LocationGetDto>(result);
-            return CreatedAtAction(nameof(GetById), new { locationId = mappedResult.LocationId }, mappedResult);
+            return Ok(mappedResult);
         }
 
         [HttpGet]
@@ -52,9 +51,9 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> GetById(int locationId)
         {
             var result = await _mediator.Send(new GetLocationByIdQuery { Id = locationId });
-            if (result == null)
-                return NotFound();
             var mappedResult = _mapper.Map<LocationGetDto>(result);
+            if (mappedResult == null)
+                return NotFound();
             return Ok(mappedResult);
         }
 
@@ -71,12 +70,15 @@ namespace TravelerGuideApp.API.Controllers
                 Price = updatedLocation.Price,
                 Latitude = updatedLocation.Latitude,
                 Longitude = updatedLocation.Longitude,
-                CityId = updatedLocation.CityId
+                CityId = updatedLocation.CityId,
             };
             var result = await _mediator.Send(command);
-            if (result == null)
+            var mappedResult = _mapper.Map<LocationPutPostDto>(result);
+            if (mappedResult == null)
+            {
                 return NotFound();
-            return NoContent();
+            }
+            return Ok(mappedResult);
         }
 
         [HttpDelete]
@@ -84,8 +86,6 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> DeleteLocation(int locationId)
         {
             var result = await _mediator.Send(new DeleteLocationCommand { Id = locationId });
-            if (result == null)
-                return NotFound();
             return NoContent();
         }
 

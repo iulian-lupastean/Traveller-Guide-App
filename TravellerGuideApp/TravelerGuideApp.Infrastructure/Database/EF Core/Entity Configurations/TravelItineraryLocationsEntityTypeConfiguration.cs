@@ -11,7 +11,7 @@ namespace TravelerGuideApp.Infrastructure.Database.EF_Core.Entity_Configurations
             travelItineraryLocationsConfiguration.HasKey(til => new { til.TravelItineraryId, til.LocationId });
             travelItineraryLocationsConfiguration.HasOne<TravelItinerary>(til => til.TravelItinerary)
                 .WithMany(travel => travel.TravelItineraryLocations)
-                .HasForeignKey(til => til.TravelItineraryId).OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(til => til.TravelItineraryId).OnDelete(DeleteBehavior.SetNull);
             travelItineraryLocationsConfiguration.HasOne<Location>(til => til.Location)
                 .WithMany(location => location.TravelItineraryLocations)
                 .HasForeignKey(til => til.LocationId).OnDelete(DeleteBehavior.Cascade);
