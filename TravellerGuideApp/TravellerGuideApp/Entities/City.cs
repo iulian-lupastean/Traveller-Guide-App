@@ -12,7 +12,11 @@ public class City
         Country = country ?? throw new ArgumentNullException(nameof(country));
     }
 
-
+    public City(int id, string name, string country, ICollection<Location>? locations) : this(name, country)
+    {
+        Id = id;
+        Locations = locations;
+    }
 
     public int Id { get; set; }
     [MaxLength(50)]
@@ -28,4 +32,15 @@ public class City
         return $" {Id} {Name} {Country}";
     }
 
+    public override bool Equals(object? obj)
+    {
+        if (obj is not City city)
+        {
+            return false;
+        }
+        else
+        {
+            return Id == city.Id && Name == city.Name && Country == city.Country;
+        }
+    }
 }
