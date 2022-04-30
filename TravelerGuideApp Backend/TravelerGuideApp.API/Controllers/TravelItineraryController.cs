@@ -27,11 +27,13 @@ namespace TravelerGuideApp.API.Controllers
                 return BadRequest(ModelState);
             var created = await _mediator.Send(_mapper.Map<CreateTravelItineraryCommand>(travelItinerary));
             var mappedResult = _mapper.Map<TravelItineraryGetDto>(created);
+            if (mappedResult == null)
+                return Conflict();
             return Ok(mappedResult);
         }
 
         [HttpGet]
-        [Route("user/{userId}")]
+        [Route("{userId}")]
         public async Task<IActionResult> GetAllForUser(int userId)
         {
             var result = await _mediator.Send(new GetTravelItinerariesQuery { UserId = userId });
@@ -43,13 +45,13 @@ namespace TravelerGuideApp.API.Controllers
         }
 
         [HttpGet]
-        [Route("{travelItineraryId}")]
+        [Route("Admin/{travelItineraryId}")]
         public async Task<IActionResult> GetById(int travelItineraryId)
         {
             var result = await _mediator.Send(new GetTravelItineraryByIdQuery { Id = travelItineraryId });
-            if (result == null)
-                return NotFound();
             var mappedResult = _mapper.Map<TravelItineraryGetDto>(result);
+            if (mappedResult == null)
+                return NotFound();
             return Ok(mappedResult);
         }
 

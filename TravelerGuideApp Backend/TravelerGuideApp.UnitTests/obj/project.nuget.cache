@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kvNSfL1nwDYdvf0uclDXdIpZOVMJiFw2/sosCyNn43dQ/XsfAKmSf96TFI4eZS5PG79p12JPHJstDwfCNgu9+Q==",
+  "dgSpecHash": "N9u516zvzV6KLAuAfNcgn14IpzRg5ZiykukwGONeYuGCvYdfdoth9XOn1BJvhUhVZPiuGL9OEpuEAZ+/W6q7CQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravelerGuideApp.UnitTests\\TravelerGuideApp.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveler-Guide-App Backend\\TravelerGuideApp Backend\\TravelerGuideApp.UnitTests\\TravelerGuideApp.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilupa\\.nuget\\packages\\autofixture\\4.17.0\\autofixture.4.17.0.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\autofixture.automoq\\4.17.0\\autofixture.automoq.4.17.0.nupkg.sha512",

@@ -74,8 +74,6 @@ namespace TravelerGuideApp.API.Controllers
         public async Task<IActionResult> DeleteUser(int userId)
         {
             var result = await _mediator.Send(new DeleteUserCommand { Id = userId });
-            if (result == null)
-                return NotFound();
             return NoContent();
         }
     }

@@ -26,9 +26,11 @@ namespace TravelerGuideApp.UnitTests
         {
             // Arrange
             _mockMediator.Setup(m => m.Send(It.IsAny<GetCitiesListQuery>(), It.IsAny<CancellationToken>())).Verifiable();
-            // Act
             var controller = new CitiesController(_mockMapper.Object, _mockMediator.Object);
+
+            // Act
             await controller.GetAll();
+
             // Assert
             _mockMediator.Verify(x => x.Send(It.IsAny<GetCitiesListQuery>(), It.IsAny<CancellationToken>()), Times.Once());
 
@@ -37,9 +39,9 @@ namespace TravelerGuideApp.UnitTests
         public async Task Get_City_By_Id_GetCityByIdQueryIsCalled()
         {
             // Arrange
+            var controller = new CitiesController(_mockMapper.Object, _mockMediator.Object);
             _mockMediator.Setup(m => m.Send(It.IsAny<GetCityByIdQuery>(), It.IsAny<CancellationToken>())).Verifiable();
             // Act
-            var controller = new CitiesController(_mockMapper.Object, _mockMediator.Object);
             await controller.GetById(1);
             // Assert
             _mockMediator.Verify(x => x.Send(It.IsAny<GetCityByIdQuery>(), It.IsAny<CancellationToken>()), Times.Once());

@@ -16,7 +16,7 @@ namespace TravelerGuideApp.Application.CommandHandlers
         }
         public Task<TravelItinerary> Handle(CreateTravelItineraryCommand command, CancellationToken cancellationToken)
         {
-            var travelItinerary = new TravelItinerary(command.Name, command.Status, command.TravelDate, command.userId);
+            var travelItinerary = new TravelItinerary(command.Name, command.Status, command.TravelDate, command.UserId);
 
             _repository.Create(travelItinerary);
             _repository.Save();

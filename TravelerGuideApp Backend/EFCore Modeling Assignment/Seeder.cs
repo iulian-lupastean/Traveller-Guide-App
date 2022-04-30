@@ -71,7 +71,7 @@ namespace TravelerGuideApp.Presentation
                     Name = travel.Name,
                     Status = travel.Status,
                     TravelDate = travel.TravelDate,
-                    userId = travel.UserId
+                    UserId = travel.UserId
                 });
             }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ROijwCfUvg0+xG0IJYoD/JfQtREUP84g0zepKzAeibG2ZIlhDOtS74cbjW04q3bhhN6Dbh/e1s/sGB6zcJ6ZUQ==",
+  "dgSpecHash": "cxSn3XpBqcVgX9l+OuUJhnE2VUkHaq7K8QuyStdY+KT9dUIlkeRXmq/mcsVg8+kRjNitOOlHVHbOX8iqruwdjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravelerGuideApp.API\\TravelerGuideApp.API.csproj",
+  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveler-Guide-App Backend\\TravelerGuideApp Backend\\TravelerGuideApp.API\\TravelerGuideApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilupa\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

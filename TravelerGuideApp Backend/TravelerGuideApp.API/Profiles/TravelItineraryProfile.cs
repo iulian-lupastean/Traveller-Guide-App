@@ -25,7 +25,7 @@ namespace TravelerGuideApp.API.Profiles
                 .ForMember(ti => ti.Name, opt => opt.MapFrom(s => s.Name))
                 .ForMember(ti => ti.Status, opt => opt.MapFrom(s => s.Status))
                 .ForMember(ti => ti.TravelDate, opt => opt.MapFrom(s => s.TravelDate))
-                .ForMember(ti => ti.userId, opt => opt.MapFrom(s => s.userId))
+                .ForMember(ti => ti.UserId, opt => opt.MapFrom(s => s.userId))
                 .ReverseMap();
 
         }

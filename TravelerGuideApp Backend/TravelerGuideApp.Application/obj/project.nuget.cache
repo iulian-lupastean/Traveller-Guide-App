@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BnDkRNE4OM0r1M5mnVat5LNgrKlz7m9yAEKzZMpPneW+g0XHGUeJK0uF/ebVvs15wr4kpnr1PUzj4gasyEMrGQ==",
+  "dgSpecHash": "5ckdws9Eez76DvBaoeDyd8pJrgTqg49uM+xYsvJRQPNuIMuB3YQ86wLg0l9UPXgGpDYQUKhQ3yLO7ees4+VNLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravelerGuideApp.Application\\TravelerGuideApp.Application.csproj",
+  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveler-Guide-App Backend\\TravelerGuideApp Backend\\TravelerGuideApp.Application\\TravelerGuideApp.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilupa\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\ilupa\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

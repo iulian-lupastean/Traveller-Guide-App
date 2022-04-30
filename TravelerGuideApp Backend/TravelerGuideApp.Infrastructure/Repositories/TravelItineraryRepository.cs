@@ -41,7 +41,7 @@ namespace TravelerGuideApp.Infrastructure.Repositories
 
         public void Delete(int travelItineraryId)
         {
-            TravelItinerary travelItinerary = context.TravelItineraries.Find(travelItineraryId);
+            var travelItinerary = context.TravelItineraries.Find(travelItineraryId);
             if (travelItinerary != null)
             {
                 context.TravelItineraries.Remove(travelItinerary);

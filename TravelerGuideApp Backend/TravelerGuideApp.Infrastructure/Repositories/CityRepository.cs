@@ -29,9 +29,12 @@ namespace TravelerGuideApp.Infrastructure.Repositories
 
         public void Delete(int cityId)
         {
-            City city = _context.Cities.Find(cityId);
+            var city = _context.Cities.Find(cityId);
 
-            _context.Cities.Remove(city);
+            if (city != null)
+            {
+                _context.Cities.Remove(city);
+            }
 
         }
 

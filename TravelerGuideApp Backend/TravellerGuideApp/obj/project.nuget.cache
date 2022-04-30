@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L/wmDdYDzstY9DWr4BxUoZF3YoG1bTAxa5BHRopYDxYfjkCFA0YyEqykJsig4rWsE/dENr2+Of4bR0yWuEyVOg==",
+  "dgSpecHash": "6hDCaDwQr7DacDBuiOZ4gxQrdPxql9RZSye3EXXXnFnMoJs+jn/wWosTnw23aoZyxcZOrDJFI3uyEZeEZou0jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveller-Guide-App\\TravellerGuideApp\\TravellerGuideApp\\TravelerGuideApp.Domain.csproj",
+  "projectFilePath": "C:\\Users\\ilupa\\Desktop\\Proiect Amdaris\\Traveler-Guide-App Backend\\TravelerGuideApp Backend\\TravellerGuideApp\\TravelerGuideApp.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

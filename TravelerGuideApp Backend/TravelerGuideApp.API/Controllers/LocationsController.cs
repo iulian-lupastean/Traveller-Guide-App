@@ -21,6 +21,7 @@ namespace TravelerGuideApp.API.Controllers
         }
 
         [HttpPost]
+        [Route("Admin/")]
         public async Task<IActionResult> CreateLocation([FromBody] LocationPutPostDto location)
         {
             var command = new CreateLocationCommand
@@ -72,7 +73,7 @@ namespace TravelerGuideApp.API.Controllers
         }
 
         [HttpPut]
-        [Route("{locationId}")]
+        [Route("Admin/{locationId}")]
         public async Task<IActionResult> UpdateLocation(int locationId, [FromBody] LocationPutPostDto updatedLocation)
         {
             var command = new UpdateLocationCommand
@@ -96,7 +97,7 @@ namespace TravelerGuideApp.API.Controllers
         }
 
         [HttpDelete]
-        [Route("{locationId}")]
+        [Route("Admin/{locationId}")]
         public async Task<IActionResult> DeleteLocation(int locationId)
         {
             var result = await _mediator.Send(new DeleteLocationCommand { Id = locationId });
