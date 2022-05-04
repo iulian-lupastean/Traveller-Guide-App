@@ -321,17 +321,31 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INSERT INTO "TravelItineraryLocations" ("LocationId", "TravelItineraryId")
       VALUES (@p0, @p1);
 info: TravelerGuideApp.API.Middleware.TgaMiddleware[0]
-      Middleware Singleton GUID: 66001175-d60e-48d2-85bf-44bdf3b59b01
+      Middleware Singleton GUID: 977c4373-c0e5-4db2-8d89-97d98d7d2a99
 info: TravelerGuideApp.API.Middleware.TgaMiddleware[0]
-      Middleware Transient GUID: 5175e46b-dbf5-4c9d-8df5-412c14f47174
+      Middleware Transient GUID: a4e3f8ae-7c64-4066-a223-464ebf5b8dfd
 warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
       Failed to determine the https port for redirect.
 info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
       Entity Framework Core 6.0.4 initialized 'TravelerGuideAppDBContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.4' with options: None
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
-      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
-      INSERT INTO "Cities" ("Country", "Name")
-      VALUES (@p0, @p1);
-      SELECT "Id"
-      FROM "Cities"
-      WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."Address", "l"."CityId", "l"."Latitude", "l"."LocationType", "l"."Longitude", "l"."Name", "l"."Price"
+      FROM "Locations" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Locations"
+      WHERE "Id" = @p0;
+      SELECT changes();
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.4 initialized 'TravelerGuideAppDBContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.4' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."Name", "t"."Status", "t"."TravelDate", "t"."UserId"
+      FROM "TravelItineraries" AS "t"
+      WHERE EXISTS (
+          SELECT 1
+          FROM "TravelItineraryLocations" AS "t0"
+          WHERE ("t"."Id" = "t0"."TravelItineraryId") AND ("t0"."LocationId" = @__locationId_0))

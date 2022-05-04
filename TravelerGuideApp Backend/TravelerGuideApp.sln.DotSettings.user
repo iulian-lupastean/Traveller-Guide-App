@@ -7,6 +7,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::EE05411B-6A48-41DA-B0E5-065CB382F554::net6.0::TravelerGuideApp.IntegrationTests.TravelItinerariesControllerTests.Get_TravelItinerary_By_Id_ShouldReturnOkStatusCode&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::EE05411B-6A48-41DA-B0E5-065CB382F554::net6.0::TravelerGuideApp.IntegrationTests.TravelItinerariesControllerTests.Get_All_Travel_Itineraries_For_User_ShouldReturnExistingTravelItinerary&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::EE05411B-6A48-41DA-B0E5-065CB382F554::net6.0::TravelerGuideApp.IntegrationTests.LocationsControllerTests.Update_Location_ShouldReturnOkStatusCode&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=92ecd9d0_002D5b43_002D4dd6_002D83bb_002D8e0f898d8ed0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CityFixture" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

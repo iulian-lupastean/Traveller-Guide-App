@@ -321,17 +321,17 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INSERT INTO "TravelItineraryLocations" ("LocationId", "TravelItineraryId")
       VALUES (@p0, @p1);
 info: TravelerGuideApp.API.Middleware.TgaMiddleware[0]
-      Middleware Singleton GUID: f9cbbfa8-21a3-43f5-b7b4-631f37db33e6
+      Middleware Singleton GUID: 1fcaa214-aa1d-41aa-9698-8cfd65e14aa3
 info: TravelerGuideApp.API.Middleware.TgaMiddleware[0]
-      Middleware Transient GUID: c9f6fe59-dcf8-47f1-af5a-367a96687e3d
+      Middleware Transient GUID: b30aea79-3d06-4493-88d4-1829af780e67
 warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
       Failed to determine the https port for redirect.
 info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
       Entity Framework Core 6.0.4 initialized 'TravelerGuideAppDBContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.4' with options: None
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
-      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 19), @p1='?' (Size = 13), @p2='?' (Size = 12), @p3='?' (Size = 12), @p4='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
-      INSERT INTO "Users" ("Email", "FirstName", "LastName", "Password", "UserType")
-      VALUES (@p0, @p1, @p2, @p3, @p4);
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("Country", "Name")
+      VALUES (@p0, @p1);
       SELECT "Id"
-      FROM "Users"
+      FROM "Cities"
       WHERE changes() = 1 AND "rowid" = last_insert_rowid();
