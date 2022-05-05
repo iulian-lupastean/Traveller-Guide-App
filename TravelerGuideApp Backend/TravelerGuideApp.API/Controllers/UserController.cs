@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TravelerGuideApp.API.DTOs;
 using TravelerGuideApp.Application.Commands;
+using TravelerGuideApp.Application.Interfaces;
 using TravelerGuideApp.Application.Queries;
+using TravelerGuideApp.Domain.Entities;
 
 namespace TravelerGuideApp.API.Controllers
 {
@@ -13,23 +16,42 @@ namespace TravelerGuideApp.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
 
-        public UserController(IMapper mapper, IMediator mediator)
+        public UserController(IMapper mapper, IMediator mediator, ITokenService tokenService)
         {
             _mediator = mediator;
+            _tokenService = tokenService;
             _mapper = mapper;
         }
 
-        [HttpPost]
+        [HttpPost("Register")]
         public async Task<IActionResult> CreateUser([FromBody] UserPutPostDto user)
         {
-
             var created = await _mediator.Send(_mapper.Map<CreateUserCommand>(user));
+
             var mappedResult = _mapper.Map<UserGetDto>(created);
             return Ok(mappedResult);
         }
 
+        [HttpPost("Login")]
+        public async Task<ActionResult<UserAuthDto>> LoginUser([FromBody] UserLoginDto userLogin)
+        {
+
+            var user = await _mediator.Send(new GetUserByEmailQuery { Email = userLogin.Email });
+            var result = await _mediator.Send(new GetUserByEmailQuery { Email = user.Email });
+            if (result == null)
+                return BadRequest("Email Is Wrong");
+            if (user.Password != result.Password)
+                return BadRequest("Password Is Wrong");
+
+            return new UserAuthDto
+            {
+                Email = user.Email,
+                Token = _tokenService.CreateToken(user)
+            };
+        }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -38,6 +60,7 @@ namespace TravelerGuideApp.API.Controllers
             return Ok(mappedResult);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{userId}")]
         public async Task<IActionResult> GetById(int userId)
@@ -76,5 +99,7 @@ namespace TravelerGuideApp.API.Controllers
             var result = await _mediator.Send(new DeleteUserCommand { Id = userId });
             return NoContent();
         }
+
+
     }
 }

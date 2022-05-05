@@ -8,6 +8,7 @@ namespace TravelerGuideApp.Application.Interfaces
         void Update(User user);
         void Delete(int userId);
         User GetById(int userId);
+        User GetByEmail(string email);
         IEnumerable<User> GetAll();
         public void Save();
     }

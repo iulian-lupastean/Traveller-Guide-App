@@ -39,6 +39,10 @@ namespace TravelerGuideApp.Infrastructure.Repositories
             return context.Users.Find(userId);
         }
 
+        public User GetByEmail(string email)
+        {
+            return context.Users.FirstOrDefault(x => x.Email.Equals(email));
+        }
 
 
         public IEnumerable<User> GetAll()

@@ -1,7 +1,11 @@
-﻿using MediatR;
+﻿using System.Text;
+using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using TravelerGuideApp.API.Extensions;
 using TravelerGuideApp.API.Middleware;
 using TravelerGuideApp.API.Services;
 using TravelerGuideApp.Application.Commands;
@@ -22,23 +26,14 @@ namespace TravelerGuideApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TravelerGuideApp", Version = "v1" });
             });
 
-            services.AddSingleton<ISingletonService, SingletonService>();
-            services.AddScoped<IScopedService, ScopedService>();
-            services.AddTransient<ITransientService, TransientService>();
-            services.AddScoped<ICityRepository, CityRepository>();
-            services.AddScoped<ILocationRepository, LocationRepository>();
-            services.AddScoped<ITravelItineraryRepository, TravelItineraryRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ITravelItineraryLocationsRepository, TravelItineraryLocationsRepository>();
-            services.AddDbContext<TravelerGuideAppDBContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Default")));
-            services.AddMediatR(typeof(CreateCityCommand));
-            services.AddAutoMapper(typeof(Startup));
+            services.AddApplicationServices(Configuration);
+            services.AddIdentityServices(Configuration);
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -54,6 +49,7 @@ namespace TravelerGuideApp.API
             app.UseRouting();
 
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
